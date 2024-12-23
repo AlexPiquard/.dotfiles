@@ -82,7 +82,7 @@ plugins=(
 zsh-autosuggestions
 )
 
-[ -f $ZSH/oh-my-zsh.sh ] source $ZSH/oh-my-zsh.sh
+[[ ! -f $ZSH/oh-my-zsh.sh ]] || source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -123,8 +123,8 @@ export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/nvim/mason/packages/jdtls/l
 
 export PATH="$PATH:/home/alex/.local/bin"
 
-[ -f /home/linuxbrew/.linuxbrew/bin/brew ] eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-[ -f /home/linuxbrew/.linuxbrew/bin/mise ] eval "$(/home/linuxbrew/.linuxbrew/bin/mise activate zsh)"
+[[ ! -f /home/linuxbrew/.linuxbrew/bin/brew ]] || eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+[[ ! -f /home/linuxbrew/.linuxbrew/bin/mise ]] || eval "$(/home/linuxbrew/.linuxbrew/bin/mise activate zsh)"
 
 # direnv
 export DIRENV_LOG_FORMAT=
