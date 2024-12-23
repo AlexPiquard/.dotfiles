@@ -2,6 +2,10 @@
 
 - `sudo apt install alacritty`
 - 1password
+- `sudo apt install zsh`
+  `chsh -s $(which zsh)`
+  `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" `
+
 
 # Brew
 
