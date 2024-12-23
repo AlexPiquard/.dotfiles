@@ -41,3 +41,8 @@ map('n', '<leader>tb', gitsigns.toggle_current_line_blame)
 map('n', '<leader>hd', gitsigns.diffthis)
 map('n', '<leader>hD', function() gitsigns.diffthis('~') end)
 map('n', '<leader>td', gitsigns.toggle_deleted)
+
+-- Themes
+map("n", "<C-t>", function ()
+	require("nvchad.themes").open { style = "flat" }
+end, {})
