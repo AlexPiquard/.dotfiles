@@ -6,7 +6,6 @@
   `chsh -s $(which zsh)`
   `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" `
 
-
 # Brew
 
 `brew install $(cat brew-packages.txt)`
@@ -15,3 +14,8 @@
 
 Install : `stow .`
 Pull changes into repo : `stow --adopt .`
+
+# Tmux
+
+`git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+`tmux source ~/.config/tmux/tmux.conf`
