@@ -3,7 +3,7 @@ lazygit
 make
 mise
 neovim
-bun
+oven-sh/bun/bun
 ripgrep
 stow
 direnv
