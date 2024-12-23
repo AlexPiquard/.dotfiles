@@ -1,0 +1,12 @@
+[user]
+	name = Alex Piquard
+	email = alex.piquard@hotmail.com
+	signingkey = B662A94FAF35FFD9
+[commit]
+	gpgsign = true
+[gpg "ssh"]
+	program = "/opt/1Password/op-ssh-sign"
+[core]
+	editor = nvim
+[github]
+	user = AlexPiquard

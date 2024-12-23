@@ -1,0 +1,9 @@
+fzf
+lazygit
+make
+mise
+neovim
+bun
+ripgrep
+stow
+direnv

@@ -1,0 +1,14 @@
+import = [ "~/.config/alacritty/tokyo-night.toml" ]
+
+[shell]
+args = ["-l", "-c", "tmux attach || tmux"]
+program = "/bin/zsh"
+
+[font]
+size = 10
+offset = { x = 0, y = 0 }
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[selection]
+save_to_clipboard = true
