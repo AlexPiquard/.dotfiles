@@ -7,3 +7,4 @@ oven-sh/bun/bun
 ripgrep
 stow
 direnv
+tmux
