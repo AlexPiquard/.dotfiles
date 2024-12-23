@@ -7,6 +7,5 @@ oven-sh/bun/bun
 ripgrep
 stow
 direnv
-tmux
 zsh-autosuggestions
 powerlevel10k

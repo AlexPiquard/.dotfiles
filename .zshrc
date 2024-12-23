@@ -1,7 +1,3 @@
-# Activate ZSH plugins installed with brew
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -19,7 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -81,19 +77,20 @@ DISABLE_MAGIC_FUNCTIONS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
+# plugins=(
 # git
-zsh-autosuggestions
-)
+# )
 
 [[ ! -f $ZSH/oh-my-zsh.sh ]] || source $ZSH/oh-my-zsh.sh
 
-# User configuration
+export PATH="$PATH:/home/alex/.local/bin"
 
-# export MANPATH="/usr/local/man:$MANPATH"
+# Activate ZSH plugins installed with brew
+source $(/home/linuxbrew/.linuxbrew/bin/brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(/home/linuxbrew/.linuxbrew/bin/brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -z $SSH_CONNECTION ]]; then
@@ -121,11 +118,8 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-
 # # jdtls lombok
 export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/nvim/mason/packages/jdtls/lombok.jar"
-
-export PATH="$PATH:/home/alex/.local/bin"
 
 [[ ! -f /home/linuxbrew/.linuxbrew/bin/brew ]] || eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 [[ ! -f /home/linuxbrew/.linuxbrew/bin/mise ]] || eval "$(/home/linuxbrew/.linuxbrew/bin/mise activate zsh)"
