@@ -9,4 +9,5 @@
 
 # Dotfiles
 
-`stow --adopt .`
+Install : `stow .`
+Pull changes into repo : `stow --adopt .`
