@@ -9,3 +9,4 @@ stow
 direnv
 zsh-autosuggestions
 powerlevel10k
+maven
