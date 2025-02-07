@@ -127,3 +127,6 @@ export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/nvim/mason/packages/jdtls/l
 # direnv
 export DIRENV_LOG_FORMAT=
 eval "$(direnv export zsh)"
+
+# bun completions
+[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"

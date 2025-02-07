@@ -25,3 +25,4 @@ next error: alt b
 previous error: alt B
 
 move half page: ctrl u|d
+move screen : ctrl y/e
