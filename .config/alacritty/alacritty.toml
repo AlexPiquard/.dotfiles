@@ -1,4 +1,6 @@
-import = [ "~/.config/alacritty/tokyo-night.toml" ]
+import = [
+	"~/.config/alacritty/alacritty-auto-theme/theme.toml"
+]
 
 [shell]
 args = ["-l", "-c", "tmux attach || tmux"]
@@ -9,6 +11,9 @@ size = 10
 offset = { x = 0, y = 0 }
 [font.normal]
 family = "JetBrainsMono Nerd Font"
+
+[env]
+term = "xterm-256color"
 
 [selection]
 save_to_clipboard = true

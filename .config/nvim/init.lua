@@ -32,6 +32,8 @@ require("lazy").setup({
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
 
+vim.o.termguicolors = true
+
 require "options"
 require "nvchad.autocmds"
 
