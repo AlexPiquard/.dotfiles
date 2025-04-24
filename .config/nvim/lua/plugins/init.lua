@@ -31,7 +31,46 @@ return {
     end,
   },
 
-	{ import = "nvchad.blink.lazyspec" },
+	-- copy of nvchad/blink/lazyspec (nvchad/ui)
+  {
+    "hrsh7th/nvim-cmp",
+    enabled = false,
+  },
+
+  {
+    "saghen/blink.cmp",
+    version = "1.*",
+    event = { "InsertEnter", "CmdLineEnter" },
+
+    dependencies = {
+      "rafamadriz/friendly-snippets",
+      {
+        -- snippet plugin
+        "L3MON4D3/LuaSnip",
+        dependencies = "rafamadriz/friendly-snippets",
+        opts = { history = true, updateevents = "TextChanged,TextChangedI" },
+        config = function(_, opts)
+          require("luasnip").config.set_config(opts)
+          require "nvchad.configs.luasnip"
+        end,
+      },
+
+      {
+        "windwp/nvim-autopairs",
+        opts = {
+          fast_wrap = {},
+          disable_filetype = { "TelescopePrompt", "vim" },
+        },
+      },
+    },
+
+    opts_extend = { "sources.default" },
+
+    opts = function()
+      return require "configs.blink"
+    end,
+  },
+	-- end
 
 	-- Modify 'treesitter' configuration
 	{

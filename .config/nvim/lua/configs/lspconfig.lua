@@ -40,6 +40,7 @@ for lsp, opts in pairs(servers) do
 	end
 
 	lspconfig[lsp].setup(config)
-end
 
--- vim.lsp.enable(servers)
+	-- vim.lsp.enable(lsp)
+  -- vim.lsp.config(lsp, opts)
+end
