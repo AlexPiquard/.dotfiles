@@ -31,6 +31,8 @@ return {
     end,
   },
 
+	{ import = "nvchad.blink.lazyspec" },
+
 	-- Modify 'treesitter' configuration
 	{
 		"nvim-treesitter/nvim-treesitter",

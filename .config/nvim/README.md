@@ -26,3 +26,5 @@ previous error: alt B
 
 move half page: ctrl u|d
 move screen : ctrl y/e
+
+menu : ctrl y (tree or buf)

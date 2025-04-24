@@ -42,7 +42,25 @@ map('n', '<leader>hd', gitsigns.diffthis)
 map('n', '<leader>hD', function() gitsigns.diffthis('~') end)
 map('n', '<leader>td', gitsigns.toggle_deleted)
 
--- Themes
-map("n", "<C-t>", function ()
-	require("nvchad.themes").open { style = "flat" }
+-- Menus
+map("n", "<C-y>", function ()
+  require('menu.utils').delete_old_menus()
+
+  -- clicked buf
+  local buf = vim.api.nvim_get_current_buf()
+  local options = vim.bo[buf].ft == "NvimTree" and "nvimtree" or "default"
+	require("menu").open(options, {})
+end, {})
+
+-- Menus on rightclick
+vim.keymap.set({ "n", "v" }, "<RightMouse>", function()
+  require('menu.utils').delete_old_menus()
+
+  vim.cmd.exec '"normal! \\<RightMouse>"'
+
+  -- clicked buf
+  local buf = vim.api.nvim_win_get_buf(vim.fn.getmousepos().winid)
+  local options = vim.bo[buf].ft == "NvimTree" and "nvimtree" or "default"
+
+  require("menu").open(options, { mouse = true })
 end, {})
