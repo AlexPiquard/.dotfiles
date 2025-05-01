@@ -125,7 +125,6 @@ export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/nvim/mason/packages/jdtls/l
 [[ ! -f /home/linuxbrew/.linuxbrew/bin/mise ]] || eval "$(/home/linuxbrew/.linuxbrew/bin/mise activate zsh)"
 
 # direnv
-export DIRENV_LOG_FORMAT=
 eval "$(direnv export zsh)"
 
 # bun completions
