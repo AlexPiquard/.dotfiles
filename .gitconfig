@@ -12,3 +12,5 @@
 	editor = nvim
 [github]
 	user = AlexPiquard
+[init]
+	defaultBranch = main
