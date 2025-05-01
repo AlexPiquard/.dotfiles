@@ -25,6 +25,7 @@ local servers = {
 		-- Use biome config file from current opened project
 		root_dir = lspconfig.util.root_pattern("biome.json", "biome.jsonc"),
 	},
+	gopls = {},
 }
 local nvlsp = require("nvchad.configs.lspconfig")
 
