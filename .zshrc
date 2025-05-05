@@ -129,3 +129,6 @@ eval "$(direnv export zsh)"
 
 # bun completions
 [ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
+
+# go
+export PATH="$PATH:$HOME/go/bin"
