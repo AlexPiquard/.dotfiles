@@ -1,0 +1,2 @@
+[general]
+import = [ '~/.config/alacritty/github-light.toml' ]

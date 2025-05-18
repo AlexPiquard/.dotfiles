@@ -5,7 +5,7 @@
 local M = {}
 
 M.base46 = {
-	theme_toggle = { "tokyonight", "one_light" },
+	theme_toggle = { "material-lighter", "one_light" },
 	theme = "one_light"
 }
 

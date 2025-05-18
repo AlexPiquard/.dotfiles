@@ -1,8 +1,5 @@
-import = [
-	"~/.config/alacritty/alacritty-auto-theme/theme.toml"
-]
 
-[shell]
+[terminal.shell]
 args = ["-l", "-c", "tmux attach || tmux"]
 program = "/bin/zsh"
 
@@ -17,3 +14,8 @@ term = "xterm-256color"
 
 [selection]
 save_to_clipboard = true
+
+[general]
+import = [
+	"~/.config/alacritty/auto-theme/theme.toml"
+]
