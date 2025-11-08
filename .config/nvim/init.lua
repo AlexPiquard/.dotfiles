@@ -1,4 +1,3 @@
-vim.g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
 vim.g.mapleader = " "
 
 -- Copies in nvim applies to system clipboard
@@ -18,25 +17,16 @@ local lazy_config = require "configs.lazy"
 
 -- load plugins
 require("lazy").setup({
-  {
-    "NvChad/NvChad",
-    lazy = false,
-    branch = "v2.5",
-    import = "nvchad.plugins",
-  },
-
   { import = "plugins" },
 }, lazy_config)
-
--- load theme
-dofile(vim.g.base46_cache .. "defaults")
-dofile(vim.g.base46_cache .. "statusline")
 
 vim.o.termguicolors = true
 
 require "options"
-require "nvchad.autocmds"
+require "autocmds"
 
 vim.schedule(function()
   require "mappings"
 end)
+
+vim.cmd.colorscheme("vim")

@@ -5,8 +5,12 @@ mise
 neovim
 oven-sh/bun/bun
 ripgrep
+fd
 stow
 direnv
 zsh-autosuggestions
-powerlevel10k
 maven
+zsh-syntax-highlighting
+starship
+rust
+zoxide

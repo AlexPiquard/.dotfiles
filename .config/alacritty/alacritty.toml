@@ -15,6 +15,12 @@ term = "xterm-256color"
 [selection]
 save_to_clipboard = true
 
+[keyboard]
+bindings = [
+	# delete previous word using ctrl+backspace (binded to ctrl+w which is the default key for that)
+	{ key = "Back", mods = "Control", chars = "\u0017" }
+]
+
 [general]
 import = [
 	"~/.config/alacritty/auto-theme/theme.toml"

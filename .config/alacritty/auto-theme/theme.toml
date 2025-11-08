@@ -1,2 +1,2 @@
 [general]
-import = [ '~/.config/alacritty/github-light.toml' ]
+import = [ '~/.config/alacritty/tokyonight-moon.toml' ]

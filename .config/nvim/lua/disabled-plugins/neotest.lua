@@ -2,6 +2,7 @@ return {
   {
     "nvim-neotest/neotest",
     lazy = true,
+		enabled = false,
     dependencies = {
       "olimorris/neotest-phpunit",
     },

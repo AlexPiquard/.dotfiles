@@ -1,8 +1,5 @@
 local function set_theme(name)
-	local cur_theme = require("nvconfig").base46.theme
-	require("nvchad.utils").replace_word(cur_theme, name)
-	require("nvconfig").base46.theme = name
-	require("base46").load_all_highlights()
+	vim.cmd("colorscheme " .. name)
 end
 
 return {
@@ -11,13 +8,12 @@ return {
 		event = "VeryLazy",
 		opts = {
 			set_dark_mode = function()
-				set_theme("tokyonight")
+				set_theme("tokyonight-moon")
 			end,
 			set_light_mode = function()
-				set_theme("one_light")
+				set_theme("tokyonight-day")
 			end,
 			update_interval = 1000,
-			fallback = "dark",
 		},
 	},
 }
