@@ -33,10 +33,6 @@ tmux source ~/.config/tmux/tmux.conf
 
 `sudo systemctl enable AlacrittyAutoTheme`
 
-# Nvim
-
-:MasonInstallAll
-
 # TODO
 
 use a terminal supporting images, and use snacks.image (kitty or ghostty)

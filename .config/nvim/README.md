@@ -8,47 +8,66 @@
 
 # vim
 
-operators: d c p\
-\[number]\
-motions: 0 b w|e $
 
-cut word : diw
-(daw : with spaces around)
+| mode                   | keymap |
+|------------------------|--------|
+| \[v\]isual (selection) | v      |
+| insert \[a\]fter       | a      |
+| insert before          | i      |
+| replace                | r      |
 
-replace: r R
 
-new line: O|o
+| operator          | keymap |
+|-------------------|--------|
+| delete            | d      |
+| delete and insert | c      |
+| copy              | y      |
+| paste             | p      |
 
-open previous telescope: alt n
 
-next error: alt b
-previous error: alt B
+| motion                    | keymap |
+|---------------------------|--------|
+| move to start of line     | 0      |
+| move \[e\]nd of word      | e      |
+| move next \[w\]ord        | w      |
+| move start of word        | b      |
+| move end of previous word | ge     |
+| move to end of line       | $      |
 
-move half page: ctrl u|d
-move screen : ctrl y/e
 
-move previous position : ctrl o
-move other direction : ctrl i
+| action                     | keymap   |
+|----------------------------|----------|
+| cut word                   | diw      |
+| cut word and space after   | daw      |
+| new line after             | o        |
+| new line before            | O        |
+| move cursor half page      | ctrl u/d |
+| move screen                | ctrl y/e |
+| move previous position     | ctrl o   |
+| move back                  | ctrl i   |
+| close part of code (fold)  | zc       |
 
-close part of code (fold) : zc
 
-menu : ctrl p (tree or buf)
+| plugin action               | keymap     |
+|-----------------------------|------------|
+| previous picker             | alt n      |
+| next/previous error         | alt b/B    |
+| open context menu           | ctrl p     |
+| toggle table mode in readme | <leader>tm |
+| todos picker                | <leader>st |
+| files picker                | <leader>ff |
+| grep picker                 | <leader>fw |
+| diagnostics picker          | <leader>sd |
+| diagnostics in buffer       | <leader>sD |
+| buffer structure            | <leader>ft |
+| references picker           | gr         |
 
-# snacks.picker
-
-list todos : <leader>st
-files : <leader>ff
-grep : <leader>fw
-diagnostics : <leader>sd
-diagnostics in buffer : <leader>sD
-buffer structure : <leader>ft
-references : gr
 
 # TODO
 
-https://github.com/MagicDuck/grug-far.nvim
-https://github.com/mikavilpas/blink-ripgrep.nvim
-https://github.com/sphamba/smear-cursor.nvim
-https://github.com/Aloxaf/fzf-tab
-vertical buffer list (barbar)
-auto indent not working in react jsx tags
+- https://github.com/MagicDuck/grug-far.nvim
+- https://github.com/mikavilpas/blink-ripgrep.nvim
+- https://github.com/sphamba/smear-cursor.nvim
+- https://github.com/Aloxaf/fzf-tab
+- vertical buffer list (barbar)
+- auto indent not working in react jsx tags
