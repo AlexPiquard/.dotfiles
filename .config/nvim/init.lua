@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.o.termguicolors = true
 
 -- Copies in nvim applies to system clipboard
 vim.api.nvim_set_option("clipboard", "unnamed")
@@ -20,10 +21,9 @@ require("lazy").setup({
   { import = "plugins" },
 }, lazy_config)
 
-vim.o.termguicolors = true
-
 require "options"
 require "autocmds"
+require("scripts.lsp_hover").setup();
 
 vim.schedule(function()
   require "mappings"
