@@ -61,13 +61,15 @@
 | diagnostics in buffer       | <leader>sD |
 | buffer structure            | <leader>ft |
 | references picker           | gr         |
+| search and replace          | <leader>sr |
 
 
 # TODO
 
-- https://github.com/MagicDuck/grug-far.nvim
 - https://github.com/mikavilpas/blink-ripgrep.nvim
 - https://github.com/sphamba/smear-cursor.nvim
 - https://github.com/Aloxaf/fzf-tab
 - vertical buffer list (barbar)
 - auto indent not working in react jsx tags
+- fix markdown paragraphs
+- see mini.files integration for grug-far (https://github.com/MagicDuck/grug-far.nvim)
