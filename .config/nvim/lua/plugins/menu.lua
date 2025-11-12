@@ -1,6 +1,37 @@
 return {
-    -- rightclick & color menu
+	-- rightclick & color menu
 	"nvzone/volt",
-	"nvzone/menu",
+	{
+		"nvzone/menu",
+		keys = {
+			{
+				"<C-p>",
+				function()
+					require("menu.utils").delete_old_menus()
+
+					-- clicked buf
+					local buf = vim.api.nvim_get_current_buf()
+					local options = vim.bo[buf].ft == "NvimTree" and "nvimtree" or "default"
+					require("menu").open(options, {})
+				end,
+				"Open menu",
+			},
+			{
+				mode = { "n", "v" },
+				"<RightMouse>",
+				function()
+					require("menu.utils").delete_old_menus()
+
+					vim.cmd.exec('"normal! \\<RightMouse>"')
+
+					-- clicked buf
+					local buf = vim.api.nvim_win_get_buf(vim.fn.getmousepos().winid)
+					local options = vim.bo[buf].ft == "NvimTree" and "nvimtree" or "default"
+
+					require("menu").open(options, { mouse = true })
+				end,
+			},
+		},
+	},
 	{ "nvzone/minty", cmd = { "Huefy", "Shades" } },
 }
