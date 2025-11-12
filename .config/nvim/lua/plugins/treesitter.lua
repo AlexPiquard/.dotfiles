@@ -20,7 +20,7 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		event = { "BufReadPost", "BufNewFile", "FileType" },
-		dependencies = { "OXY2DEV/markview.nvim" },
+		-- dependencies = { "OXY2DEV/markview.nvim" },
 		cmd = { "TSInstall", "TSInstallFromGrammar", "TSUpdate", "TSUninstall", "TSLog" },
 		build = ":TSUpdate",
 		branch = "main",

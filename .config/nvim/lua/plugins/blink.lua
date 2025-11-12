@@ -55,9 +55,6 @@ return {
 			fuzzy = { implementation = "prefer_rust" },
 			sources = {
 				default = { "lsp", "snippets", "buffer", "path" },
-				per_filetype = {
-					markdown = { "markview" },
-				},
 			},
 			signature = { enabled = true },
 
