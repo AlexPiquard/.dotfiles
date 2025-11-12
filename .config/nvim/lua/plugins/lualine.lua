@@ -5,6 +5,9 @@ return {
 		lazy = false,
 		opts = {
 			extensions = { "lazy", "fzf" },
+			options = {
+				disabled_filetypes = { "snacks_terminal" },
+			},
 		},
 	},
 }

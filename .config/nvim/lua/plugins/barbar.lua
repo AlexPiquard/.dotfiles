@@ -5,7 +5,7 @@ return {
 		lazy = false,
 		dependencies = {
 			"lewis6991/gitsigns.nvim",
-			-- mocked by mini.files
+			-- mocked by mini.icons
 			"nvim-tree/nvim-web-devicons",
 		},
 		-- init = function()

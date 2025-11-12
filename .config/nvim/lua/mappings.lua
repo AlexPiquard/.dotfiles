@@ -51,31 +51,6 @@ map("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
 --   { desc = "telescope find all files" }
 -- )
 
--- terminal
-map("t", "<C-x>", "<C-\\><C-N>", { desc = "terminal escape terminal mode" })
-
--- new terminals
--- map("n", "<leader>h", function()
---   require("term").new { pos = "sp" }
--- end, { desc = "terminal new horizontal term" })
---
--- map("n", "<leader>v", function()
---   require("term").new { pos = "vsp" }
--- end, { desc = "terminal new vertical term" })
-
--- toggleable
-map({ "n", "t" }, "<A-v>", function()
-	require("term").toggle({ pos = "vsp", id = "vtoggleTerm" })
-end, { desc = "terminal toggleable vertical term" })
-
-map({ "n", "t" }, "<A-h>", function()
-	require("term").toggle({ pos = "sp", id = "htoggleTerm" })
-end, { desc = "terminal toggleable horizontal term" })
-
-map({ "n", "t" }, "<A-i>", function()
-	require("term").toggle({ pos = "float", id = "floatTerm" })
-end, { desc = "terminal toggle floating term" })
-
 -- whichkey
 map("n", "<leader>wK", "<cmd>WhichKey <CR>", { desc = "whichkey all keymaps" })
 

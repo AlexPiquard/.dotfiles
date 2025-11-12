@@ -1,3 +1,7 @@
+local open_lazygit = function()
+	Snacks.terminal("lazygit", {win = {position = "float"}})
+end
+
 return {
 	{
 		"folke/snacks.nvim",
@@ -12,19 +16,17 @@ return {
 			---@field enabled? boolean
 			---@field sections snacks.dashboard.section
 			debug = { enabled = true },
-			lazygit = { enabled = true },
 			notifier = { enabled = true },
 			notify = { enabled = true },
 			picker = { enabled = true, exclude = { "bin" }, matcher = { smartcase = false } },
 			statuscolumn = { enabled = true },
-			terminal = { enabled = true },
 			indent = { enabled = true },
 		},
 		keys = {
 			{
 				"<leader>lg",
 				function()
-					Snacks.lazygit()
+					open_lazygit()
 				end,
 				desc = "LazyGit",
 			},
