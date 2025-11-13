@@ -62,6 +62,7 @@
 | buffer structure            | <leader>ft |
 | references picker           | gr         |
 | search and replace          | <leader>sr |
+| rename variable             | grn        |
 
 
 # TODO
@@ -73,3 +74,4 @@
 - auto indent not working in react jsx tags
 - fix markdown paragraphs
 - see mini.files integration for grug-far (https://github.com/MagicDuck/grug-far.nvim)
+- fyler.nvim
