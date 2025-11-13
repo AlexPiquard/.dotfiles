@@ -11,6 +11,7 @@ return {
 		opts = {
 			animate = { enabled = true },
 			bigfile = { enabled = true },
+			quickfile = { enabled = true },
 			bufdelete = { enabled = true },
 			---@class snacks.dashboard.config
 			---@field enabled? boolean
