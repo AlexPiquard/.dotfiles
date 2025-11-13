@@ -82,6 +82,5 @@ To edit the default lsp config provided by lspconfig, create a file at `.config/
 - vertical buffer list (barbar)
 - auto indent not working in react jsx tags
 - fix markdown paragraphs
-- see mini.files integration for grug-far (https://github.com/MagicDuck/grug-far.nvim)
 - fyler.nvim
 - nvim-lsp-file-operations
