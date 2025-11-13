@@ -44,6 +44,8 @@ return {
 			},
 
 			"onsails/lspkind.nvim",
+			-- adds words from entire project as completions
+			"mikavilpas/blink-ripgrep.nvim",
 		},
 
 		opts_extend = { "sources.default" },
@@ -54,13 +56,20 @@ return {
 			appearance = { nerd_font_variant = "normal" },
 			fuzzy = { implementation = "prefer_rust" },
 			sources = {
-				default = { "lazydev", "lsp", "snippets", "buffer", "path" },
+				default = { "lazydev", "lsp", "snippets", "buffer", "ripgrep", "path" },
 				providers = {
 					lazydev = {
 						name = "LazyDev",
 						module = "lazydev.integrations.blink",
 						-- make lazydev completions top priority (see `:h blink.cmp`)
 						score_offset = 100,
+					},
+					ripgrep = {
+						module = "blink-ripgrep",
+						name = "Ripgrep",
+						---@module "blink-ripgrep"
+						---@type blink-ripgrep.Options
+						opts = {},
 					},
 				},
 			},

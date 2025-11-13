@@ -76,10 +76,8 @@ To edit the default lsp config provided by lspconfig, create a file at `.config/
 
 # TODO
 
-- https://github.com/mikavilpas/blink-ripgrep.nvim
 - https://github.com/sphamba/smear-cursor.nvim
 - https://github.com/Aloxaf/fzf-tab
 - vertical buffer list (barbar)
 - fix markdown paragraphs
 - fyler.nvim
-- nvim-lsp-file-operations
