@@ -71,6 +71,7 @@ To edit the default lsp config provided by lspconfig, create a file at `.config/
 | add workspace folder (lsp)  | <leader>wa |
 | remove workspace folder     | <leader>wa |
 | list code actions           | <leader>ca |
+| list sessions               | <leader>ws |
 
 
 # TODO
