@@ -6,6 +6,10 @@
 - TSInstall : syntax highlighting
 - conform.lua : lint
 
+To add a language, just add it to the `ensure_installed` list in `lsp.lua`.
+
+To edit the default lsp config provided by lspconfig, create a file at `.config/nvim/after/lsp/[name].lsp`
+
 # vim
 
 
@@ -61,8 +65,12 @@
 | diagnostics in buffer       | <leader>sD |
 | buffer structure            | <leader>ft |
 | references picker           | gr         |
+| go to type definition       | <leader>T  |
 | search and replace          | <leader>sr |
 | rename variable             | grn        |
+| add workspace folder (lsp)  | <leader>wa |
+| remove workspace folder     | <leader>wa |
+| list code actions           | <leader>ca |
 
 
 # TODO
@@ -75,3 +83,4 @@
 - fix markdown paragraphs
 - see mini.files integration for grug-far (https://github.com/MagicDuck/grug-far.nvim)
 - fyler.nvim
+- nvim-lsp-file-operations
