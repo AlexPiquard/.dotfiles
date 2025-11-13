@@ -3,7 +3,7 @@ return {
 	{
 		"folke/which-key.nvim",
 		cmd = "WhichKey",
-		opts = { preset = "modern" },
+		opts = { preset = "helix" },
 		keys = {
 			{ "<leader>wK", "<cmd>WhichKey <CR>", desc = "whichkey all keymaps" },
 			{
