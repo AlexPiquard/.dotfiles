@@ -20,15 +20,9 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		event = { "BufReadPost", "BufNewFile", "FileType" },
-		-- dependencies = { "OXY2DEV/markview.nvim" },
 		cmd = { "TSInstall", "TSInstallFromGrammar", "TSUpdate", "TSUninstall", "TSLog" },
 		build = ":TSUpdate",
 		branch = "main",
-		opts = {
-			highlight = { enable = true },
-			folds = { enabled = true },
-			indent = { enable = false },
-		},
 		config = function(_, _)
 			require("nvim-treesitter").install(languages)
 			for _, lang in ipairs(languages) do
@@ -39,6 +33,9 @@ return {
 						vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 						vim.opt.foldmethod = "expr"
 						vim.opt.foldlevelstart = 99
+
+						-- enable indentation based on treesitter (fixes issues in jsx for example)
+						vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
 					end,
 				})
 			end

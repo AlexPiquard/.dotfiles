@@ -6,7 +6,7 @@
 - TSInstall : syntax highlighting
 - conform.lua : lint
 
-To add a language, just add it to the `ensure_installed` list in `lsp.lua`.
+To add a language, just add it to the `ensure_installed` list in `lsp.lua`, and in `treesitter.lua` for the colors.
 
 To edit the default lsp config provided by lspconfig, create a file at `.config/nvim/after/lsp/[name].lsp`
 
@@ -80,7 +80,6 @@ To edit the default lsp config provided by lspconfig, create a file at `.config/
 - https://github.com/sphamba/smear-cursor.nvim
 - https://github.com/Aloxaf/fzf-tab
 - vertical buffer list (barbar)
-- auto indent not working in react jsx tags
 - fix markdown paragraphs
 - fyler.nvim
 - nvim-lsp-file-operations

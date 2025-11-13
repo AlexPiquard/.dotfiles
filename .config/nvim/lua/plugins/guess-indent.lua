@@ -1,4 +1,5 @@
 return {
+	-- apply neovim indent config from what file already contains (tab, spaces, etc)
 	"NMAC427/guess-indent.nvim",
 	lazy = false,
 	opts = {

@@ -21,6 +21,7 @@ return {
 			notify = { enabled = true },
 			picker = { enabled = true, exclude = { "bin" }, matcher = { smartcase = false } },
 			statuscolumn = { enabled = true },
+			-- just indent visual guides
 			indent = { enabled = true },
 		},
 		keys = {
