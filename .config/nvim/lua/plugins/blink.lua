@@ -56,7 +56,7 @@ return {
 			appearance = { nerd_font_variant = "normal" },
 			fuzzy = { implementation = "prefer_rust" },
 			sources = {
-				default = { "lazydev", "lsp", "snippets", "buffer", "ripgrep", "path" },
+				default = { "lazydev", "lsp", "snippets", "buffer", "path" }, -- ripgrep
 				providers = {
 					lazydev = {
 						name = "LazyDev",

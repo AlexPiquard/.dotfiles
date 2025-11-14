@@ -50,6 +50,8 @@ To edit the default lsp config provided by lspconfig, create a file at `.config/
 | move previous position     | ctrl o   |
 | move back                  | ctrl i   |
 | close part of code (fold)  | zc       |
+| create vertical split      | ctrl-w v |
+| create horizontal split    | ctrl-w s |
 
 
 | plugin action               | keymap     |
@@ -81,3 +83,5 @@ To edit the default lsp config provided by lspconfig, create a file at `.config/
 - vertical buffer list (barbar)
 - fix markdown paragraphs
 - fyler.nvim
+- no colors in custom lsp hover
+- blink-ripgrep completions appear before lsp completions
