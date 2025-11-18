@@ -18,11 +18,11 @@ return {
 
 			formatters_by_ft = {
 				lua = { "stylua" },
-				javascript = { "biome" },
-				typescript = { "biome" },
-				typescriptreact = { "biome" },
-				json = {"biome"},
-				jsonc = {"biome"},
+				javascript = { "biome-check" },
+				typescript = { "biome-check" },
+				typescriptreact = { "biome-check" },
+				json = { "biome-check" },
+				jsonc = { "biome-check" },
 				html = { "prettier" },
 				java = { "google-java-format" },
 			},
