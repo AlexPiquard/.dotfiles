@@ -10,13 +10,14 @@ dbus-monitor --profile "interface='$interface',path=$monitor_path,member=$monito
 		let count++
 
 		if [ $count = 3 ]; then
-			theme="$(gsettings get org.gnome.desktop.interface color-scheme)"
+			theme="$(dconf read /org/gnome/desktop/interface/color-scheme)"
 
 			# tmux
-			~/.config/tmux/update-theme-tmux.sh
+			~/.config/alacritty/auto-theme/update-theme.sh "$theme" "tmux/%s.tmux"
+			tmux source ~/.config/tmux/theme.tmux
 
 			# lazygit
-			~/.config/lazygit/update-theme-lazygit.sh
+			~/.config/alacritty/auto-theme/update-theme.sh "$theme" "lazygit/%s.yml"
 
 			# alacritty
 			echo "[general]" > ~/.config/alacritty/auto-theme/theme.toml
