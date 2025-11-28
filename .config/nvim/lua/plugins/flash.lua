@@ -17,7 +17,7 @@ return {
 		-- stylua: ignore
 		keys = {
 			{ "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
-			{ "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+			{ "S", mode = { "n", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
 			-- do something remotely and go back
 			-- d/c/y then r, search and go like with "s", then a motion like iw for inner word, or i and a closing character, or use "s" 
 			{ "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },

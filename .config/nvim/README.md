@@ -76,10 +76,57 @@ To edit the default lsp config provided by lspconfig, create a file at `.config/
 | list sessions               | <leader>ws |
 
 
+## surround/delimiters
+
+using vim-surround
+
+### add
+
+
+| action              | keymap          |
+|---------------------|-----------------|
+| yank surround (add) | ys<...>         |
+| word                | ys<i/a>**w**<.> |
+| paragraph           | ys<i/a>**p**<.> |
+| line                | yss<.>          |
+
+
+### delete
+
+
+| action                      | keymap |
+|-----------------------------|--------|
+| delete surround             | ds<.>  |
+| delete balanced parenthesis | ds%    |
+
+
+### change
+
+
+| action          | keymap          |
+|-----------------|-----------------|
+| change surround | cs<actual><new> |
+
+
+### visual mode
+
+
+| action   | keymap |
+|----------|--------|
+| Surround | S<.>   |
+
+
+### special notes 
+
+**(** adds a space and not **)**
+
+use **b** instead of **)**
+
+use **B** instead of **}**
+
 # TODO
 
 - https://github.com/sphamba/smear-cursor.nvim
-- https://github.com/Aloxaf/fzf-tab
 - vertical buffer list (barbar)
 - fix markdown paragraphs
 - fyler.nvim
