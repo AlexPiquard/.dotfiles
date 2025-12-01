@@ -13,9 +13,6 @@ return {
 			bigfile = { enabled = true },
 			quickfile = { enabled = true },
 			bufdelete = { enabled = true },
-			---@class snacks.dashboard.config
-			---@field enabled? boolean
-			---@field sections snacks.dashboard.section
 			debug = { enabled = true },
 			notifier = { enabled = true },
 			notify = { enabled = true },

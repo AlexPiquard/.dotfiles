@@ -6,8 +6,6 @@ return {
 		---@type snacks.config
 		opts = {
 			---@class snacks.dashboard.config
-			---@field enabled? boolean
-			---@field sections snacks.dashboard.section
 			dashboard = {
 				enabled = true,
 				sections = {
