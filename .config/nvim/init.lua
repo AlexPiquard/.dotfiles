@@ -1,32 +1,12 @@
 vim.g.mapleader = " "
-vim.o.termguicolors = true
 
--- Copies in nvim applies to system clipboard
-vim.api.nvim_set_option("clipboard", "unnamed")
-
--- bootstrap lazy and all plugins
-local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
-
-if not vim.uv.fs_stat(lazypath) then
-  local repo = "https://github.com/folke/lazy.nvim.git"
-  vim.fn.system { "git", "clone", "--filter=blob:none", repo, "--branch=stable", lazypath }
-end
-
-vim.opt.rtp:prepend(lazypath)
-
-local lazy_config = require "configs.lazy"
-
--- load plugins
-require("lazy").setup({
-  { import = "plugins" },
-}, lazy_config)
-
-require "options"
-require "autocmds"
-require("scripts.lsp_hover").setup();
+require("config.lazy")
+require("options")
+require("autocmds")
+require("scripts.lsp_hover").setup()
 
 vim.schedule(function()
-  require "mappings"
+	require("mappings")
 end)
 
 vim.cmd.colorscheme("vim")

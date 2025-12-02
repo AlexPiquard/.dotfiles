@@ -1,6 +1,4 @@
 return {
-    {
-		"mfussenegger/nvim-jdtls",
-		event = "User FilePost",
-	}
+	"mfussenegger/nvim-jdtls",
+	event = "User FilePost",
 }

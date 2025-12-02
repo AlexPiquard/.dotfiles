@@ -2,6 +2,8 @@ local opt = vim.opt
 local o = vim.o
 local g = vim.g
 
+o.termguicolors = true
+
 o.laststatus = 3
 o.showmode = false
 
@@ -51,6 +53,9 @@ vim.env.PATH = table.concat({ vim.fn.stdpath("data"), "mason", "bin" }, sep) .. 
 -- folds, none by default
 vim.opt.foldmethod = "expr"
 vim.opt.foldlevelstart = 99
+
+-- Copies in nvim applies to system clipboard
+vim.api.nvim_set_option("clipboard", "unnamed")
 
 -- overridden by guess-indent.nvim
 -- vim.cmd('set noexpandtab tabstop=2 shiftwidth=0 softtabstop=0 smarttab')

@@ -59,47 +59,45 @@ vim.api.nvim_create_autocmd("LspAttach", {
 -- mason is used to install lsp servers
 -- mason-lspconfig is linking the two and enabling all installed servers
 return {
-	{
-		"mason-org/mason-lspconfig.nvim",
-		event = "User FilePost",
-		opts = {
-			-- add languages here
-			ensure_installed = {
-				"lua_ls",
-				"html",
-				"cssls",
-				"clangd",
-				"ts_ls",
-				"pylsp",
-				"marksman",
-				"tailwindcss",
-				"jdtls",
-				"biome",
-				"gopls",
+	"mason-org/mason-lspconfig.nvim",
+	event = "User FilePost",
+	opts = {
+		-- add languages here
+		ensure_installed = {
+			"lua_ls",
+			"html",
+			"cssls",
+			"clangd",
+			"ts_ls",
+			"pylsp",
+			"marksman",
+			"tailwindcss",
+			"jdtls",
+			"biome",
+			"gopls",
+		},
+	},
+	dependencies = {
+		{
+			"mason-org/mason.nvim",
+			cmd = { "Mason", "MasonInstall", "MasonUpdate" },
+			opts = {
+				PATH = "skip",
+
+				ui = {
+					icons = {
+						package_pending = " ",
+						package_installed = " ",
+						package_uninstalled = " ",
+					},
+				},
+
+				max_concurrent_installers = 10,
 			},
 		},
-		dependencies = {
-			{
-				"mason-org/mason.nvim",
-				cmd = { "Mason", "MasonInstall", "MasonUpdate" },
-				opts = {
-					PATH = "skip",
-
-					ui = {
-						icons = {
-							package_pending = " ",
-							package_installed = " ",
-							package_uninstalled = " ",
-						},
-					},
-
-					max_concurrent_installers = 10,
-				},
-			},
-			{
-				"neovim/nvim-lspconfig",
-				event = "User FilePost",
-			},
+		{
+			"neovim/nvim-lspconfig",
+			event = "User FilePost",
 		},
 	},
 }

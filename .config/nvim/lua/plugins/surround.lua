@@ -1,6 +1,4 @@
 return {
-	{
-		"tpope/vim-surround",
-		event = "User FilePost",
-	}
+	"tpope/vim-surround",
+	event = "User FilePost",
 }

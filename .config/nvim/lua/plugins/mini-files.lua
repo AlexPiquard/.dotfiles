@@ -38,7 +38,6 @@ local files_grug_far_replace = function()
 	end
 end
 
-
 -- create mappings for split views and grug-far when files open
 vim.api.nvim_create_autocmd("User", {
 	pattern = "MiniFilesBufferCreate",
@@ -55,77 +54,75 @@ vim.api.nvim_create_autocmd("User", {
 })
 
 return {
-	{
-		"nvim-mini/mini.files",
-		version = false,
-		lazy = false,
-		dependencies = {
-			"nvim-mini/mini.icons",
+	"nvim-mini/mini.files",
+	version = false,
+	lazy = false,
+	dependencies = {
+		"nvim-mini/mini.icons",
+	},
+	-- show git status of files (not working well)
+	-- require("utils.mini-files-git").Init_mini_files_git_integration()
+	opts = {
+		-- Customization of shown content
+		content = {
+			-- Predicate for which file system entries to show
+			filter = nil,
+			-- What prefix to show to the left of file system entry
+			prefix = nil,
+			-- In which order to show file system entries
+			sort = nil,
 		},
-		-- show git status of files (not working well)
-		-- require("utils.mini-files-git").Init_mini_files_git_integration()
-		opts = {
-			-- Customization of shown content
-			content = {
-				-- Predicate for which file system entries to show
-				filter = nil,
-				-- What prefix to show to the left of file system entry
-				prefix = nil,
-				-- In which order to show file system entries
-				sort = nil,
-			},
 
-			-- Module mappings created only inside explorer.
-			-- Use `''` (empty string) to not create one.
-			mappings = {
-				close = "q",
-				go_in = "l",
-				go_in_plus = "L",
-				go_out = "h",
-				go_out_plus = "H",
-				mark_goto = "'",
-				mark_set = "m",
-				reset = "<BS>",
-				reveal_cwd = "n",
-				show_help = "g?",
-				synchronize = "=",
-				trim_left = "<",
-				trim_right = ">",
-			},
-
-			-- General options
-			options = {
-				-- Whether to delete permanently or move into module-specific trash
-				permanent_delete = false,
-				-- Whether to use for editing directories
-				use_as_default_explorer = true,
-			},
-
-			-- Customization of explorer windows
-			windows = {
-				-- Maximum number of windows to show side by side
-				max_number = math.huge,
-				-- Whether to show preview of file/directory under cursor
-				preview = false,
-				-- Width of focused window
-				width_focus = 50,
-				-- Width of non-focused window
-				width_nofocus = 15,
-				-- Width of preview window
-				width_preview = 25,
-			},
+		-- Module mappings created only inside explorer.
+		-- Use `''` (empty string) to not create one.
+		mappings = {
+			close = "q",
+			go_in = "l",
+			go_in_plus = "L",
+			go_out = "h",
+			go_out_plus = "H",
+			mark_goto = "'",
+			mark_set = "m",
+			reset = "<BS>",
+			reveal_cwd = "n",
+			show_help = "g?",
+			synchronize = "=",
+			trim_left = "<",
+			trim_right = ">",
 		},
-		keys = {
-			{
-				"<C-n>",
-				function()
-					local buf_name = vim.api.nvim_buf_get_name(0)
-					local path = vim.fn.filereadable(buf_name) == 1 and buf_name or vim.fn.getcwd()
-					MiniFiles.open(path) -- opens only current folder
-					MiniFiles.reveal_cwd() -- shows folders up to root
-				end,
-				desc = "Open file explorer at current folder",
-			},
+
+		-- General options
+		options = {
+			-- Whether to delete permanently or move into module-specific trash
+			permanent_delete = false,
+			-- Whether to use for editing directories
+			use_as_default_explorer = true,
+		},
+
+		-- Customization of explorer windows
+		windows = {
+			-- Maximum number of windows to show side by side
+			max_number = math.huge,
+			-- Whether to show preview of file/directory under cursor
+			preview = false,
+			-- Width of focused window
+			width_focus = 50,
+			-- Width of non-focused window
+			width_nofocus = 15,
+			-- Width of preview window
+			width_preview = 25,
+		},
+	},
+	keys = {
+		{
+			"<C-n>",
+			function()
+				local buf_name = vim.api.nvim_buf_get_name(0)
+				local path = vim.fn.filereadable(buf_name) == 1 and buf_name or vim.fn.getcwd()
+				MiniFiles.open(path) -- opens only current folder
+				MiniFiles.reveal_cwd() -- shows folders up to root
+			end,
+			desc = "Open file explorer at current folder",
 		},
 	},
 }

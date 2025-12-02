@@ -1,6 +1,4 @@
 return {
-	{
-		"editorconfig/editorconfig-vim",
-		lazy = false,
-	}
+	"editorconfig/editorconfig-vim",
+	lazy = false,
 }

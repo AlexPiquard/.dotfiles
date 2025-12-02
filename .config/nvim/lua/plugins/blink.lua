@@ -25,107 +25,105 @@ end
 
 return {
 	-- autocomplete & suggestions
-	{
-		"saghen/blink.cmp",
-		version = "*",
-		event = { "InsertEnter", "CmdLineEnter" },
+	"saghen/blink.cmp",
+	version = "*",
+	event = { "InsertEnter", "CmdLineEnter" },
 
-		dependencies = {
-			"rafamadriz/friendly-snippets",
-			{
-				-- snippet plugin
-				"L3MON4D3/LuaSnip",
-				dependencies = "rafamadriz/friendly-snippets",
-				opts = { history = true, updateevents = "TextChanged,TextChangedI" },
-				config = function(_, opts)
-					require("luasnip").config.set_config(opts)
-					configurate()
-				end,
-			},
-
-			"onsails/lspkind.nvim",
-			-- adds words from entire project as completions
-			"mikavilpas/blink-ripgrep.nvim",
+	dependencies = {
+		"rafamadriz/friendly-snippets",
+		{
+			-- snippet plugin
+			"L3MON4D3/LuaSnip",
+			dependencies = "rafamadriz/friendly-snippets",
+			opts = { history = true, updateevents = "TextChanged,TextChangedI" },
+			config = function(_, opts)
+				require("luasnip").config.set_config(opts)
+				configurate()
+			end,
 		},
 
-		opts_extend = { "sources.default" },
+		"onsails/lspkind.nvim",
+		-- adds words from entire project as completions
+		"mikavilpas/blink-ripgrep.nvim",
+	},
 
-		opts = {
-			snippets = { preset = "luasnip" },
-			cmdline = { enabled = true },
-			appearance = { nerd_font_variant = "normal" },
-			fuzzy = { implementation = "prefer_rust" },
-			sources = {
-				default = { "lazydev", "lsp", "snippets", "buffer", "path" }, -- ripgrep
-				providers = {
-					lazydev = {
-						name = "LazyDev",
-						module = "lazydev.integrations.blink",
-						-- make lazydev completions top priority (see `:h blink.cmp`)
-						score_offset = 100,
-					},
-					ripgrep = {
-						module = "blink-ripgrep",
-						name = "Ripgrep",
-						---@module "blink-ripgrep"
-						---@type blink-ripgrep.Options
-						opts = {},
-					},
+	opts_extend = { "sources.default" },
+
+	opts = {
+		snippets = { preset = "luasnip" },
+		cmdline = { enabled = true },
+		appearance = { nerd_font_variant = "normal" },
+		fuzzy = { implementation = "prefer_rust" },
+		sources = {
+			default = { "lazydev", "lsp", "snippets", "buffer", "path" }, -- ripgrep
+			providers = {
+				lazydev = {
+					name = "LazyDev",
+					module = "lazydev.integrations.blink",
+					-- make lazydev completions top priority (see `:h blink.cmp`)
+					score_offset = 100,
+				},
+				ripgrep = {
+					module = "blink-ripgrep",
+					name = "Ripgrep",
+					---@module "blink-ripgrep"
+					---@type blink-ripgrep.Options
+					opts = {},
 				},
 			},
-			signature = { enabled = true },
+		},
+		signature = { enabled = true },
 
-			keymap = {
-				preset = "default",
-				["<CR>"] = { "accept", "fallback" },
-				["<C-b>"] = { "scroll_documentation_up", "fallback" },
-				["<C-f>"] = { "scroll_documentation_down", "fallback" },
-				["<Tab>"] = { "select_next", "fallback" },
-				["<S-Tab>"] = { "select_prev", "fallback" },
+		keymap = {
+			preset = "default",
+			["<CR>"] = { "accept", "fallback" },
+			["<C-b>"] = { "scroll_documentation_up", "fallback" },
+			["<C-f>"] = { "scroll_documentation_down", "fallback" },
+			["<Tab>"] = { "select_next", "fallback" },
+			["<S-Tab>"] = { "select_prev", "fallback" },
+		},
+
+		completion = {
+			ghost_text = { enabled = false },
+			documentation = {
+				auto_show = true,
+				auto_show_delay_ms = 100,
+				window = { border = "single" },
+				treesitter_highlighting = true,
 			},
 
-			completion = {
-				ghost_text = { enabled = false },
-				documentation = {
-					auto_show = true,
-					auto_show_delay_ms = 100,
-					window = { border = "single" },
-					treesitter_highlighting = true,
+			list = {
+				selection = {
+					preselect = true,
+					auto_insert = false,
 				},
+			},
 
-				list = {
-					selection = {
-						preselect = true,
-						auto_insert = false,
-					},
-				},
-
-				menu = {
-					enabled = true,
-					scrollbar = false,
-					border = "single",
-					max_height = 30,
-					draw = {
-						columns = { { "kind_icon" }, { "label", "label_description", gap = 1 } },
-						components = {
-							kind_icon = {
-								text = function(ctx)
-									local kind_icon, _, _ = require("mini.icons").get("lsp", ctx.kind)
-									return kind_icon
-								end,
-								-- (optional) use highlights from mini.icons
-								highlight = function(ctx)
-									local _, hl, _ = require("mini.icons").get("lsp", ctx.kind)
-									return hl
-								end,
-							},
-							kind = {
-								-- (optional) use highlights from mini.icons
-								highlight = function(ctx)
-									local _, hl, _ = require("mini.icons").get("lsp", ctx.kind)
-									return hl
-								end,
-							},
+			menu = {
+				enabled = true,
+				scrollbar = false,
+				border = "single",
+				max_height = 30,
+				draw = {
+					columns = { { "kind_icon" }, { "label", "label_description", gap = 1 } },
+					components = {
+						kind_icon = {
+							text = function(ctx)
+								local kind_icon, _, _ = require("mini.icons").get("lsp", ctx.kind)
+								return kind_icon
+							end,
+							-- (optional) use highlights from mini.icons
+							highlight = function(ctx)
+								local _, hl, _ = require("mini.icons").get("lsp", ctx.kind)
+								return hl
+							end,
+						},
+						kind = {
+							-- (optional) use highlights from mini.icons
+							highlight = function(ctx)
+								local _, hl, _ = require("mini.icons").get("lsp", ctx.kind)
+								return hl
+							end,
 						},
 					},
 				},
