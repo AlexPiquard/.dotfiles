@@ -8,7 +8,7 @@ DISABLE_MAGIC_FUNCTIONS="true"
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-export PATH="$PATH:/home/alex/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
@@ -50,13 +50,13 @@ source $HOME/oh-my-zsh.zsh
 # bun completions
 [ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
 # bun bin
-export PATH="/home/alex/.bun/bin:$PATH"
+export PATH="$HOME/.bun/bin:$PATH"
 
 # go
 export PATH="$PATH:$HOME/go/bin"
 
 # 1password gitea plugin for tea cli
-source /home/alex/.config/op/plugins.sh
+source $HOME/.config/op/plugins.sh
 
 # lazygit theme
 export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml,$HOME/.config/lazygit/theme.yml"
