@@ -63,6 +63,7 @@ To edit the default lsp config provided by lspconfig, create a file at `.config/
 | todos picker                | <leader>st |
 | files picker                | <leader>ff |
 | grep picker                 | <leader>fw |
+| buffers picker              | <leader>,  |
 | diagnostics picker          | <leader>sd |
 | diagnostics in buffer       | <leader>sD |
 | buffer structure            | <leader>ft |
@@ -126,7 +127,6 @@ use **B** instead of **}**
 
 # TODO
 
-- https://github.com/sphamba/smear-cursor.nvim
 - vertical buffer list (barbar)
 - fix markdown paragraphs
 - fyler.nvim

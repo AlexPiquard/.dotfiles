@@ -1,5 +1,5 @@
 local open_lazygit = function()
-	Snacks.terminal("lazygit", {win = {position = "float"}})
+	Snacks.terminal("lazygit", { win = { position = "float" } })
 end
 
 return {
@@ -50,13 +50,28 @@ return {
 				end,
 				desc = "Git log [L]ine",
 			},
-			-- {
-			-- 	"<c-n>",
-			-- 	function()
-			-- 		Snacks.explorer()
-			-- 	end,
-			-- 	desc = "File Explorer",
-			-- },
+			{
+				"<leader>,",
+				function()
+					Snacks.picker.buffers({
+						win = {
+							input = {
+								keys = {
+									["dd"] = { "bufdelete", mode = { "n" } },
+								},
+							},
+						},
+					})
+				end,
+				desc = "Buffers",
+			},
+			{
+				"<leader>u",
+				function()
+					Snacks.picker.undo()
+				end,
+				desc = "Undo History",
+			},
 			{
 				"<leader>ff",
 				function()
