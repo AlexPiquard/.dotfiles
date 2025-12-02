@@ -127,7 +127,6 @@ use **B** instead of **}**
 
 # TODO
 
-- vertical buffer list (barbar)
 - fix markdown paragraphs
 - fyler.nvim
 - no colors in custom lsp hover

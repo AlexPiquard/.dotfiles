@@ -86,7 +86,7 @@ return {
 				mark_goto = "'",
 				mark_set = "m",
 				reset = "<BS>",
-				reveal_cwd = "@",
+				reveal_cwd = "n",
 				show_help = "g?",
 				synchronize = "=",
 				trim_left = "<",
