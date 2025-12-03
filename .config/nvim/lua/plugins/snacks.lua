@@ -50,6 +50,13 @@ return {
 			desc = "Git log [L]ine",
 		},
 		{
+			"<leader>gd",
+			function()
+				Snacks.picker.git_diff()
+			end,
+			desc = "Git [d]iff",
+		},
+		{
 			"<leader>,",
 			function()
 				Snacks.picker.buffers({

@@ -75,6 +75,15 @@ To edit the default lsp config provided by lspconfig, create a file at `.config/
 | remove workspace folder     | <leader>wa |
 | list code actions           | <leader>ca |
 | list sessions               | <leader>ws |
+| lazygit                     | <leader>lg |
+| git log file                | <leader>gf |
+| git log                     | <leader>gl |
+| git log line                | <leader>gL |
+| git diff                    | <leader>gd |
+| git reset hunk              | <leader>hr |
+| git reset buffer            | <leader>hR |
+| git preview hunk            | <leader>hp |
+| git blame                   | <leader>hb |
 
 
 ## surround/delimiters
@@ -131,3 +140,4 @@ use **B** instead of **}**
 - fyler.nvim
 - no colors in custom lsp hover
 - blink-ripgrep completions appear before lsp completions
+- snacks.scratch
