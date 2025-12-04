@@ -25,8 +25,6 @@ map("n", "<leader>ch", "<cmd>NvCheatsheet<CR>", { desc = "toggle nvcheatsheet" }
 map("n", "<leader>/", "gcc", { desc = "toggle comment", remap = true })
 map("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
 
-map("n", ";", ":", { desc = "CMD enter command mode" })
-
 map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
 
 -- Tmux
