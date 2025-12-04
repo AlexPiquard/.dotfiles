@@ -1,6 +1,7 @@
 return {
 	-- show key mappings
 	"folke/which-key.nvim",
+	lazy = false,
 	cmd = "WhichKey",
 	opts = { preset = "helix" },
 	keys = {
