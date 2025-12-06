@@ -24,7 +24,7 @@ return {
 		{ "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
 		-- use C-s to enable/disable flash in "/" search
 		{ "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
-		-- "f" : search next character, then f to next, F to previous
+		-- "f" : search next character, then f or ; to next, F to previous
 		-- "t" : same as "f" but goes just before
 	},
 }

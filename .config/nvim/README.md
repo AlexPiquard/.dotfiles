@@ -84,7 +84,7 @@ To edit the default lsp config provided by lspconfig, create a file at `.config/
 | git reset buffer            | <leader>hR |
 | git preview hunk            | <leader>hp |
 | git blame                   | <leader>hb |
-| bookmarks (arrow)           | ;          |
+| bookmarks (arrow)           | <leader>b  |
 | buffer bookmarks (arrow)    | m          |
 
 

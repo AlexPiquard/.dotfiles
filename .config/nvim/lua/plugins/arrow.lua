@@ -7,7 +7,7 @@ return {
 	},
 	opts = {
 		show_icons = true,
-		leader_key = ";",
+		leader_key = "<leader>b",
 		-- per buffer mappings
 		buffer_leader_key = "m",
 	},
