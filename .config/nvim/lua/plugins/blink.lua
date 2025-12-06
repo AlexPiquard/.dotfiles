@@ -53,9 +53,11 @@ return {
 		snippets = { preset = "luasnip" },
 		cmdline = { enabled = true },
 		appearance = { nerd_font_variant = "normal" },
-		fuzzy = { implementation = "prefer_rust" },
+		fuzzy = {
+			implementation = "prefer_rust_with_warning",
+		},
 		sources = {
-			default = { "lazydev", "lsp", "snippets", "buffer", "path" }, -- ripgrep
+			default = { "lazydev", "lsp", "snippets", "buffer", "path", "ripgrep" },
 			providers = {
 				lazydev = {
 					name = "LazyDev",
@@ -69,9 +71,13 @@ return {
 					---@module "blink-ripgrep"
 					---@type blink-ripgrep.Options
 					opts = {},
+					-- shown last
+					score_offset = -2000,
 				},
 			},
 		},
+
+		-- show function parameters
 		signature = { enabled = true },
 
 		keymap = {
@@ -84,7 +90,8 @@ return {
 		},
 
 		completion = {
-			ghost_text = { enabled = false },
+			keyword = { range = "full" },
+			ghost_text = { enabled = true },
 			documentation = {
 				auto_show = true,
 				auto_show_delay_ms = 100,
@@ -99,13 +106,23 @@ return {
 				},
 			},
 
+			accept = {
+				auto_brackets = {
+					kind_resolution = {
+						-- fix auto brackets for react
+						blocked_filetypes = {},
+					},
+				},
+			},
+
 			menu = {
 				enabled = true,
 				scrollbar = false,
 				border = "single",
 				max_height = 30,
 				draw = {
-					columns = { { "kind_icon" }, { "label", "label_description", gap = 1 } },
+					treesitter = { "lsp" },
+					columns = { { "kind_icon" }, { "label", "label_description", "source_name", gap = 1 } },
 					components = {
 						kind_icon = {
 							text = function(ctx)
