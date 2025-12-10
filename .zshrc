@@ -55,6 +55,9 @@ export PATH="$HOME/.bun/bin:$PATH"
 # go
 export PATH="$PATH:$HOME/go/bin"
 
+# fix pkg path
+export PKG_CONFIG_PATH="/usr/share/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig"
+
 # 1password gitea plugin for tea cli
 source $HOME/.config/op/plugins.sh
 
@@ -67,3 +70,9 @@ alias ll='ls -l'
 # Ctrl+Delete: kill the word forward (default is Alt+d)
 # Ctrl+Backspace is handled in alacritty.toml because this key is unknown here
 bindkey '^[[3;5~' kill-word
+
+# rust
+if [[ -f $HOME/.cargo/env ]]; then
+  . "$HOME/.cargo/env"
+  export PATH="$HOME/.cargo/bin"
+fi

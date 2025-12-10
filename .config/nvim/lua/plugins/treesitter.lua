@@ -13,6 +13,7 @@ local languages = {
 	"html",
 	"go",
 	"java",
+	"rust",
 }
 
 return {

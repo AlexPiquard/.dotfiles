@@ -31,7 +31,7 @@ vim.lsp.config("*", {
 	capabilities = capabilities,
 })
 
--- register mappings lsp server is attached
+-- register mappings when lsp server is attached
 local map = vim.keymap.set
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)
@@ -75,6 +75,7 @@ return {
 			"jdtls",
 			"biome",
 			"gopls",
+			"rust_analyzer"
 		},
 	},
 	dependencies = {

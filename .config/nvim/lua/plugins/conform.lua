@@ -24,6 +24,7 @@ return {
 			jsonc = { "biome-check" },
 			html = { "prettier" },
 			java = { "google-java-format" },
+			rust = { "rustfmt" },
 		},
 	},
 }

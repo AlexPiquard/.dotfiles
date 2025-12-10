@@ -15,6 +15,10 @@
 
 `./.config/zen/install.sh`
 
+# Rust
+
+`curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh`
+
 # Dotfiles
 
 Install : `stow .`

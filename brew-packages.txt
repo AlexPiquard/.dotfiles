@@ -12,5 +12,4 @@ zsh-autosuggestions
 maven
 zsh-syntax-highlighting
 starship
-rust
 zoxide
