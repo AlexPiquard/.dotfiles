@@ -91,7 +91,7 @@ return {
 
 		completion = {
 			keyword = { range = "full" },
-			ghost_text = { enabled = true },
+			ghost_text = { enabled = false },
 			documentation = {
 				auto_show = true,
 				auto_show_delay_ms = 100,
@@ -102,7 +102,7 @@ return {
 			list = {
 				selection = {
 					preselect = true,
-					auto_insert = false,
+					auto_insert = true,
 				},
 			},
 
