@@ -76,3 +76,6 @@ if [[ -f $HOME/.cargo/env ]]; then
   . "$HOME/.cargo/env"
   export PATH="$HOME/.cargo/bin"
 fi
+
+# gstreamer
+export GST_PLUGIN_PATH="/usr/lib/x86_64-linux-gnu/gstreamer-1.0/"
