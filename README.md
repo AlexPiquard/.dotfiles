@@ -43,4 +43,4 @@ use a terminal supporting images, and use snacks.image (kitty or ghostty)
 
 1password integration with zen browser not working because root owning is required for zen bin and parent folder 
 
-fix alacritty borders being white after restart
+fix alacritty borders being white after restart (restarting AlacrittyAutoTheme.service fixes it ?)

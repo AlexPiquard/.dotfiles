@@ -19,6 +19,9 @@ dbus-monitor --profile "interface='$interface',path=$monitor_path,member=$monito
 			# lazygit
 			~/.config/alacritty/auto-theme/update-theme.sh "$theme" "lazygit/%s.yml"
 
+			# opencode
+			~/.config/alacritty/auto-theme/update-theme.sh "$theme" "opencode/themes/%s.json"
+
 			# alacritty
 			echo "[general]" > ~/.config/alacritty/auto-theme/theme.toml
 			if [[ "$theme" == "'prefer-dark'" ]]; then

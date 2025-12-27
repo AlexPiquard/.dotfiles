@@ -13,3 +13,4 @@ maven
 zsh-syntax-highlighting
 starship
 zoxide
+opencode
