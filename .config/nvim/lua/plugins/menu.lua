@@ -14,7 +14,7 @@ return {
 					local options = vim.bo[buf].ft == "NvimTree" and "nvimtree" or "default"
 					require("menu").open(options, {})
 				end,
-				"Open menu",
+				desc = "Open menu",
 			},
 			{
 				mode = { "n", "v" },

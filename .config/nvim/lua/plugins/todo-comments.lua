@@ -9,7 +9,7 @@ return {
 			function()
 				Snacks.picker.todo_comments()
 			end,
-			desc = "Todo",
+			desc = "List Todos",
 		},
 	},
 }

@@ -9,23 +9,23 @@ return {
 		},
 	},
 	keys = {
-		{ "<leader>hr", require("gitsigns").reset_hunk, "Git reset hunk" },
+		{ "<leader>hr", require("gitsigns").reset_hunk, desc = "Git reset hunk" },
 		{
 			mode = "v",
 			"<leader>hr",
 			function()
 				require("gitsigns").reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
 			end,
-			"Git reset hunk",
+			desc = "Git reset hunk",
 		},
-		{ "<leader>hR", require("gitsigns").reset_buffer, "Git reset buffer" },
-		{ "<leader>hp", require("gitsigns").preview_hunk, "Git preview hunk" },
+		{ "<leader>hR", require("gitsigns").reset_buffer, desc = "Git reset buffer" },
+		{ "<leader>hp", require("gitsigns").preview_hunk, desc = "Git preview hunk" },
 		{
 			"<leader>hb",
 			function()
 				Snacks.git.blame_line()
 			end,
-			"Git blame",
+			desc = "Git blame",
 		},
 	},
 }
