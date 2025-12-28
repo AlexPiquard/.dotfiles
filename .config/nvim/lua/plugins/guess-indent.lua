@@ -9,4 +9,12 @@ return {
 			["softtabstop"] = 4,
 		},
 	},
+	keys = {
+		{
+			"<leader>ri",
+			"<CMD>GuessIndent<CR>",
+			mode = "n",
+			desc = "Reload GuessIndent",
+		},
+	},
 }
