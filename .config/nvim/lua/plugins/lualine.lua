@@ -8,6 +8,7 @@ return {
 			disabled_filetypes = { "snacks_terminal" },
 		},
 		sections = {
+			-- show recording
 			lualine_x = {
 				{
 					require("noice").api.status.message.get_hl,
