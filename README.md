@@ -13,7 +13,7 @@
 
 # Browser
 
-`./.config/zen/install.sh`
+`./.config/<zen/firefox/helium>/install.sh`
 
 # Rust
 
@@ -41,6 +41,6 @@ tmux source ~/.config/tmux/tmux.conf
 
 use a terminal supporting images, and use snacks.image (kitty or ghostty)
 
-1password integration with zen browser not working because root owning is required for zen bin and parent folder 
+1password integration with browsers not working because root owning is required for browser bin and parent folder 
 
 fix alacritty borders being white after restart (restarting AlacrittyAutoTheme.service fixes it ?)

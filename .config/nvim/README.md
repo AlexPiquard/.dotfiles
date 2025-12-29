@@ -1,11 +1,5 @@
 # help
 
-- Lazy : plugins
-- MasonInstall : install lsp server (autocompletion, errors)
-- lspconfig.lua : use lsp server
-- TSInstall : syntax highlighting
-- conform.lua : lint
-
 To add a language, just add it to the `ensure_installed` list in `lsp.lua`, and in `treesitter.lua` for the colors.
 
 To edit the default lsp config provided by lspconfig, create a file at `.config/nvim/after/lsp/[name].lsp`
