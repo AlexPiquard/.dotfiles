@@ -137,3 +137,4 @@ use **B** instead of **}**
 - no colors in custom lsp hover
 - blink-ripgrep completions appear before lsp completions
 - snacks.scratch
+- https://github.com/chrisgrieser/nvim-scissors

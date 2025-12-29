@@ -26,7 +26,7 @@ end
 return {
 	-- autocomplete & suggestions
 	"saghen/blink.cmp",
-	version = "*",
+	version = "*", -- updates at version, not commit
 	event = { "InsertEnter", "CmdLineEnter" },
 
 	dependencies = {
@@ -122,7 +122,7 @@ return {
 				max_height = 30,
 				draw = {
 					treesitter = { "lsp" },
-					columns = { { "kind_icon" }, { "label", "label_description", "source_name", gap = 1 } },
+					columns = { { "kind_icon" }, { "label", "label_description", "kind", gap = 1 } },
 					components = {
 						kind_icon = {
 							text = function(ctx)
