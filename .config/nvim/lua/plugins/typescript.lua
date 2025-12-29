@@ -1,19 +1,25 @@
 return {
 	{
 		"windwp/nvim-ts-autotag",
-		ft = {"javascript", "typescript", "typescriptreact", "html"},
-        opts = {}
+		ft = { "javascript", "typescript", "typescriptreact", "html" },
+		opts = {},
 	},
 	{
 		"dmmulroy/ts-error-translator.nvim",
-		ft = {"typescript", "typescriptreact"}
+		ft = { "typescript", "typescriptreact" },
 	},
+	-- {
+	-- 	-- adds css colors
+	-- 	"norcalli/nvim-colorizer.lua",
+	-- 	event = "User FilePost",
+	-- 	config = function()
+	-- 		require("colorizer").setup()
+	-- 	end,
+	-- },
 	{
-		-- adds css colors
-		"norcalli/nvim-colorizer.lua",
+		-- Highlights all color codes
+		"brenoprata10/nvim-highlight-colors",
 		event = "User FilePost",
-		config = function()
-			require("colorizer").setup();
-		end,
+		opts = {},
 	},
 }
