@@ -1,12 +1,12 @@
 return {
 	{
 		"windwp/nvim-ts-autotag",
-		event = "User FilePost",
+		ft = {"javascript", "typescript", "typescriptreact", "html"},
         opts = {}
 	},
 	{
 		"dmmulroy/ts-error-translator.nvim",
-		event = "User FilePost",
+		ft = {"typescript", "typescriptreact"}
 	},
 	{
 		-- adds css colors
