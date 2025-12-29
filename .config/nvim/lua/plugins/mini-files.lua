@@ -60,8 +60,6 @@ return {
 	dependencies = {
 		"nvim-mini/mini.icons",
 	},
-	-- show git status of files (not working well)
-	-- require("utils.mini-files-git").Init_mini_files_git_integration()
 	opts = {
 		-- Customization of shown content
 		content = {
@@ -125,4 +123,8 @@ return {
 			desc = "Open file explorer at current folder",
 		},
 	},
+	-- config = function()
+	-- 	-- show git status of files
+	-- 	require("scripts.mini-files-git").Init_mini_files_git_integration()
+	-- end,
 }

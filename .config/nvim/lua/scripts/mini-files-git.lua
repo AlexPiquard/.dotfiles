@@ -1,3 +1,6 @@
+-- https://gist.github.com/bassamsdata/eec0a3065152226581f8d4244cce9051
+-- not working
+
 local nsMiniFiles = vim.api.nvim_create_namespace("mini_files_git")
 local autocmd = vim.api.nvim_create_autocmd
 local _, MiniFiles = pcall(require, "mini.files")
