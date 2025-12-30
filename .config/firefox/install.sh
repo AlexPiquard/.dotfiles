@@ -3,7 +3,7 @@
 tarball_dir="$HOME/.tarball-installations"
 install_dir="$tarball_dir/firefox"
 executable_path="$install_dir/firefox"
-icon_path="$install_dir/browser/chrome/icons/default128.png"
+icon_path="$install_dir/browser/chrome/icons/default/default128.png"
 desktop_file="$HOME/.local/share/applications/firefox.desktop"
 
 cd $tarball_dir
@@ -13,4 +13,34 @@ cd $install_dir
 
 curl -L "https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US" | tar xJvf - --strip-components=1
 
-ln -s ~/.config/firefox/firefox.desktop $desktop_file
+rm -f $desktop_file
+touch $desktop_file
+echo "
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=$executable_path %u
+Terminal=false
+X-MultipleArgs=false
+Icon=$icon_path
+StartupWMClass=firefox_firefox
+DBusActivatable=false
+Categories=GNOME;GTK;Network;WebBrowser;
+MimeType=application/json;application/pdf;application/rdf+xml;application/rss+xml;application/x-xpinstall;application/xhtml+xml;application/xml;audio/flac;audio/ogg;audio/webm;image/avif;image/gif;image/jpeg;image/png;image/svg+xml;image/webp;text/html;text/xml;video/ogg;video/webm;x-scheme-handler/chrome;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/mailto;
+StartupNotify=true
+Actions=new-window;new-private-window;open-profile-manager;
+Name=Firefox
+Comment=Fast and private browser
+GenericName=Web Browser
+Keywords=Internet;WWW;Browser;Web;Explorer;
+X-GNOME-FullName=Mozilla Firefox
+[Desktop Action new-window]
+Exec=$executable_path --new-window %u
+Name=New Window
+[Desktop Action new-private-window]
+Exec=$executable_path --private-window %u
+Name=New Private Window
+[Desktop Action open-profile-manager]
+Exec=$executable_path --ProfileManager
+Name=Open Profile Manager
+" >> $desktop_file
