@@ -14,6 +14,7 @@ local languages = {
 	"go",
 	"java",
 	"rust",
+	"yaml",
 }
 
 return {

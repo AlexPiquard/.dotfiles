@@ -3,9 +3,9 @@ return {
 	"nvim-lualine/lualine.nvim",
 	lazy = false,
 	opts = {
-		extensions = { "lazy", "fzf" },
+		extensions = { "lazy" },
 		options = {
-			disabled_filetypes = { "snacks_terminal" },
+			globalstatus = true,
 		},
 		sections = {
 			-- show recording
