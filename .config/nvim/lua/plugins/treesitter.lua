@@ -15,6 +15,8 @@ local languages = {
 	"java",
 	"rust",
 	"yaml",
+	"xml",
+	"zsh",
 }
 
 return {
@@ -26,19 +28,22 @@ return {
 	branch = "main",
 	config = function(_, _)
 		require("nvim-treesitter").install(languages)
-		for _, lang in ipairs(languages) do
-			vim.api.nvim_create_autocmd("FileType", {
-				pattern = { lang },
-				callback = function()
-					vim.treesitter.start()
+
+		-- auto-start highlights & indentation
+		vim.api.nvim_create_autocmd("FileType", {
+			desc = "User: enable treesitter highlighting",
+			callback = function(ctx)
+				-- highlights
+				local hasStarted = pcall(vim.treesitter.start, ctx.buf) -- errors for filetypes with no parser
+
+				-- indent
+				if hasStarted then
+					vim.bo[ctx.buf].indentexpr = "v:lua.require('nvim-treesitter').indentexpr()"
 					vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 					vim.opt.foldmethod = "expr"
 					vim.opt.foldlevelstart = 99
-
-					-- enable indentation based on treesitter (fixes issues in jsx for example)
-					vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-				end,
-			})
-		end
+				end
+			end,
+		})
 	end,
 }
