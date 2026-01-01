@@ -69,6 +69,7 @@ To edit the default lsp config provided by lspconfig, create a file at `.config/
 | remove workspace folder     | <leader>wa |
 | list code actions           | <leader>ca |
 | list sessions               | <leader>ws |
+| delete session              | <leader>wd |
 | lazygit                     | <leader>lg |
 | git log file                | <leader>gf |
 | git log                     | <leader>gl |

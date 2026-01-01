@@ -3,6 +3,7 @@ return {
 	lazy = false,
 	keys = {
 		{ "<leader>ws", "<cmd>AutoSession search<CR>", desc = "Session search" },
+		{ "<leader>wd", "<cmd>AutoSession delete<CR>", desc = "Session delete" },
 	},
 
 	---enables autocomplete for opts
