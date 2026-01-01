@@ -5,5 +5,8 @@
     "edit": "ask",
     "bash": "ask",
     "external_directory": "ask"
+  },
+  "experimental": {
+    "continue_loop_on_deny": true
   }
 }

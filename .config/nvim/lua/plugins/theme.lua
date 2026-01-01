@@ -1,3 +1,4 @@
+-- TODO: search why colors are so random when theme is disabled
 return {
 	"folke/tokyonight.nvim",
 	lazy = false,
@@ -8,5 +9,10 @@ return {
 		-- 	sidebars = "transparent",
 		-- 	floats = "transparent",
 		-- },
+		on_highlights = function(hl, c)
+			-- Opencode missing groups
+			hl.OpencodeDiffAdd = { bg = c.diff.add }
+			hl.OpencodeDiffDelete = { bg = c.diff.delete }
+		end,
 	},
 }

@@ -3,7 +3,12 @@ return {
 	"folke/which-key.nvim",
 	lazy = false,
 	cmd = "WhichKey",
-	opts = { preset = "helix" },
+	opts = {
+		preset = "helix",
+		spec = {
+			{ "<leader>o", group = "OpenCode" },
+		},
+	},
 	keys = {
 		{ "<leader>wK", "<cmd>WhichKey <CR>", desc = "whichkey all keymaps" },
 		{
