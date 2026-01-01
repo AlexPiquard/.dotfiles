@@ -1,7 +1,8 @@
--- top bar & tabs
+-- buffer list at top
 return {
 	"romgrk/barbar.nvim",
 	lazy = false,
+	enabled = false,
 	dependencies = {
 		"lewis6991/gitsigns.nvim",
 		-- mocked by mini.icons
@@ -27,25 +28,25 @@ return {
 		{
 			"<A-,>",
 			"<Cmd>BufferPrevious<CR>",
-			desc = "Previous Tab",
+			desc = "Previous buffer",
 			mode = "n",
 		},
 		{
 			"<A-;>",
 			"<Cmd>BufferNext<CR>",
-			desc = "Next Tab",
+			desc = "Next buffer",
 			mode = "n",
 		},
 		{
 			"<A-k>",
 			"<Cmd>BufferClose<CR>",
-			desc = "Close Tab",
+			desc = "Close buffer",
 			mode = "n",
 		},
 		{
 			"<A-p>",
 			"<Cmd>BufferPick<CR>",
-			desc = "Pick Tab",
+			desc = "Pick buffer",
 			mode = "n",
 		},
 	},
