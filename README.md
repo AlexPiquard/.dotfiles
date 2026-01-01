@@ -9,6 +9,7 @@
 - brew
     - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
     - `brew install $(cat brew-packages.txt)`
+- install fonts (`Rec Mono Duotone` and `Symbols Nerd Font Mono`)
 - symlink dotfiles: `stow .`
 - tmux
     - `sudo apt install tmux`

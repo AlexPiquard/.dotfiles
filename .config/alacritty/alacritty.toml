@@ -7,7 +7,7 @@ program = "/bin/zsh"
 size = 10
 offset = { x = 0, y = 0 }
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "Rec Mono Duotone Symbols"
 
 [env]
 term = "xterm-256color"
