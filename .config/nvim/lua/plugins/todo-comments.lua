@@ -7,7 +7,7 @@ return {
 		{
 			"<leader>st",
 			function()
-				Snacks.picker.todo_comments()
+				Snacks.picker.todo_comments() -- TODO: not working
 			end,
 			desc = "List Todos",
 		},

@@ -42,7 +42,6 @@ return {
 			end,
 		},
 
-		"onsails/lspkind.nvim",
 		-- adds words from entire project as completions
 		"mikavilpas/blink-ripgrep.nvim",
 	},

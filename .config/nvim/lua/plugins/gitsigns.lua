@@ -9,7 +9,7 @@ return {
 		},
 	},
 	keys = {
-		{ "<leader>hr", require("gitsigns").reset_hunk, desc = "Git reset hunk" },
+		{ "<leader>hr", "<CMD>Gitsigns reset_hunk<CR>", desc = "Git reset hunk", mode = { "n", "v" } },
 		{
 			mode = "v",
 			"<leader>hr",
@@ -18,8 +18,8 @@ return {
 			end,
 			desc = "Git reset hunk",
 		},
-		{ "<leader>hR", require("gitsigns").reset_buffer, desc = "Git reset buffer" },
-		{ "<leader>hp", require("gitsigns").preview_hunk, desc = "Git preview hunk" },
+		{ "<leader>hR", "<CMD>Gitsigns reset_buffer<CR>", desc = "Git reset buffer" },
+		{ "<leader>hp", "<CMD>Gitsigns preview_hunk<CR>", desc = "Git preview hunk" },
 		{
 			"<leader>hb",
 			function()
