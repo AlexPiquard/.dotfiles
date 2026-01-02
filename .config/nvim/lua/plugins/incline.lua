@@ -16,12 +16,12 @@ return {
 			desc = "Close tab",
 		},
 		{
-			"<A-l>",
+			"<A-;>",
 			"<cmd>tabnext<cr>",
 			desc = "Next tab",
 		},
 		{
-			"<A-h>",
+			"<A-,>",
 			"<cmd>tabprev<cr>",
 			desc = "Previous tab",
 		},

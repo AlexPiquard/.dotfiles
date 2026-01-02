@@ -46,16 +46,20 @@ To edit the default lsp config provided by lspconfig, create a file at `.config/
 | close part of code (fold)  | zc       |
 | create vertical split      | ctrl-w v |
 | create horizontal split    | ctrl-w s |
+| new tab                    | alt n    |
+| close tab                  | alt k    |
+| previous tab               | alt ,    |
+| next tab                   | alt ;    |
 
 
 | plugin action               | keymap     |
 |-----------------------------|------------|
-| previous picker             | alt n      |
 | next/previous error         | alt b/B    |
 | open context menu           | ctrl p     |
 | toggle table mode in readme | <leader>tm |
 | todos picker                | <leader>st |
 | files picker                | <leader>ff |
+| previous picker             | <leader>fr |
 | grep picker                 | <leader>fw |
 | buffers picker              | <leader>,  |
 | diagnostics picker          | <leader>sd |

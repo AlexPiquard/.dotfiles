@@ -107,7 +107,7 @@ return {
 			desc = "Treesitter",
 		},
 		{
-			"<a-n>",
+			"<leader>fr",
 			function()
 				Snacks.picker.resume()
 			end,
