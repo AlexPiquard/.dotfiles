@@ -15,7 +15,12 @@ return {
 		debug = { enabled = true },
 		notifier = { enabled = true },
 		notify = { enabled = true },
-		picker = { enabled = true, exclude = { "bin" }, matcher = { smartcase = false } },
+		picker = {
+			enabled = true,
+			exclude = { "bin" },
+			sources = { files = { hidden = true }, grep = { hidden = true }, todo_comments = { hidden = true } },
+			matcher = { smartcase = false },
+		},
 		statuscolumn = { enabled = true },
 		-- just indent visual guides
 		indent = { enabled = true },
