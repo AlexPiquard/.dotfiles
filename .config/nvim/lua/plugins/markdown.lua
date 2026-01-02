@@ -17,11 +17,15 @@ return {
 					enabled = true,
 				},
 				lsp = { enabled = true },
-				-- TODO: disable anti conceal only in opencode_output
 			},
 			file_types = {
 				"markdown",
 				"opencode_output",
+			},
+			overrides = {
+				filetype = {
+					opencode_output = { anti_conceal = { enabled = false } },
+				},
 			},
 		},
 	},

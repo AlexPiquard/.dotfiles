@@ -1,4 +1,3 @@
--- TODO: search why colors are so random when theme is disabled
 return {
 	"folke/tokyonight.nvim",
 	lazy = false,
