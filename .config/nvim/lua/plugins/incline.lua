@@ -90,9 +90,11 @@ return {
 					{ get_diagnostic_label() },
 					{ get_git_diff() },
 					{ (ft_icon or "") .. " ", group = ft_color },
-					{ filename .. " ", group = modified },
-					{ separator .. " " .. vim.api.nvim_win_get_number(props.win), group = "DevIconWindows" },
-					-- TODO: green window icon when active
+					{ filename .. " " .. separator, group = modified },
+					{
+						" " .. vim.api.nvim_win_get_number(props.win),
+						group = vim.api.nvim_get_current_win() == props.win and "Character" or "DevIconWindows",
+					},
 				}
 			end,
 		})
