@@ -7,9 +7,9 @@ return {
 	},
 	opts = {
 		show_icons = true,
-		leader_key = "<leader>b", -- TODO: find another key (one key)
+		leader_key = "q",
 		-- per buffer mappings
 		buffer_leader_key = "m",
-		-- TODO: use letters to select instead of numbers
+		index_keys = "hijklmnopuabcfgqrtwxyz"
 	},
 }
