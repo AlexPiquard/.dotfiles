@@ -45,6 +45,7 @@ return {
 				if filename == "" then
 					filename = "[No Name]"
 				end
+				-- TODO: show path if same name
 				local ft_icon, ft_color = require("mini.icons").get("file", filename)
 				local modified = vim.bo[props.buf].modified and "WarningMsg" or ""
 
