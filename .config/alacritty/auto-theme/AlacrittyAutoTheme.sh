@@ -12,24 +12,7 @@ dbus-monitor --profile "interface='$interface',path=$monitor_path,member=$monito
 		if [ $count = 3 ]; then
 			theme="$(dconf read /org/gnome/desktop/interface/color-scheme)"
 
-			# tmux
-			~/.config/alacritty/auto-theme/update-theme.sh "$theme" "tmux/%s.tmux"
-			tmux source ~/.config/tmux/theme.tmux
-
-			# lazygit
-			~/.config/alacritty/auto-theme/update-theme.sh "$theme" "lazygit/%s.yml"
-
-			# opencode
-			~/.config/alacritty/auto-theme/update-theme.sh "$theme" "opencode/themes/%s.json"
-
-			# alacritty
-			echo "[general]" > ~/.config/alacritty/auto-theme/theme.toml
-			if [[ "$theme" == "'prefer-dark'" ]]; then
-				#Need to set with full paths, goofy things are happening otherwise
-				echo "import = [ '~/.config/alacritty/tokyonight-moon.toml' ]" >> ~/.config/alacritty/auto-theme/theme.toml
-			else
-				echo "import = [ '~/.config/alacritty/tokyonight-day.toml' ]" >> ~/.config/alacritty/auto-theme/theme.toml
-			fi
+			~/.config/alacritty/auto-theme/update-themes.sh "$theme"
 			count=0
 		fi 
 	done

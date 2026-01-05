@@ -8,5 +8,3 @@ require("scripts.lsp_hover").setup()
 vim.schedule(function()
 	require("mappings")
 end)
-
-vim.cmd.colorscheme("vim")
