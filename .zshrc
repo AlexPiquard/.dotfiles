@@ -59,7 +59,7 @@ export PATH="$PATH:$HOME/go/bin"
 export PKG_CONFIG_PATH="/usr/share/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig"
 
 # 1password gitea plugin for tea cli
-source $HOME/.config/op/plugins.sh
+[[ ! -f $HOME/.config/op/plugins.sh ]] || source $HOME/.config/op/plugins.sh
 
 # lazygit theme
 export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml,$HOME/.config/lazygit/theme.yml"

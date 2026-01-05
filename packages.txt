@@ -3,7 +3,6 @@ lazygit
 make
 mise
 neovim
-oven-sh/bun/bun
 ripgrep
 fd
 stow
@@ -13,4 +12,4 @@ maven
 zsh-syntax-highlighting
 starship
 zoxide
-opencode
+tree-sitter-cli

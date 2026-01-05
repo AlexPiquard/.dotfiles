@@ -1,18 +1,21 @@
 # First install
 
-- `sudo apt install alacritty`
-- 1password
+- install alacritty
+- install 1password
 - zsh
-    - `sudo apt install zsh`
+    - install
     - `chsh -s $(which zsh)`
     - `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" `
-- brew
-    - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-    - `brew install $(cat brew-packages.txt)`
+- install packages
+    - using brew:
+        - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+        - `brew install $(cat packages.txt)`
+    - using pacman:
+        - `sudo pacman -S - < packages.txt`
 - install fonts (`Rec Mono Duotone` and `Symbols Nerd Font Mono`)
 - symlink dotfiles: `stow .`
 - tmux
-    - `sudo apt install tmux`
+    - install
     - `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
     - `tmux source ~/.config/tmux/tmux.conf`
 - auto theming: `sudo systemctl enable AlacrittyAutoTheme`
