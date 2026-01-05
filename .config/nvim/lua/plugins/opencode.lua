@@ -1,6 +1,9 @@
 return {
 	"sudo-tee/opencode.nvim",
 	lazy = false,
+	cond = function()
+		return vim.fn.executable("opencode") == 1;
+	end,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"MeanderingProgrammer/render-markdown.nvim",
