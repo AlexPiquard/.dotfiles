@@ -45,9 +45,27 @@ return {
 				if filename == "" then
 					filename = "[No Name]"
 				end
-				-- TODO: show path if same name
 				local ft_icon, ft_color = require("mini.icons").get("file", filename)
 				local modified = vim.bo[props.buf].modified and "WarningMsg" or ""
+
+				local function get_display_name()
+					local buffers = vim.api.nvim_list_bufs()
+					for _, buf in ipairs(buffers) do
+						if vim.api.nvim_buf_is_loaded(buf) then
+							if
+								vim.fn.fnamemodify(vim.api.nvim_buf_get_name(buf), ":t") == filename
+								and props.buf ~= buf
+							then
+								-- show parent in name if other buffers have the same name
+								return vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ":p:h:t")
+									.. "/"
+									.. filename
+							end
+						end
+					end
+
+					return filename
+				end
 
 				local function get_git_diff()
 					local icons = { removed = "-", changed = "~", added = "+" }
@@ -91,7 +109,7 @@ return {
 					{ get_diagnostic_label() },
 					{ get_git_diff() },
 					{ (ft_icon or "") .. " ", group = ft_color },
-					{ filename .. " " .. separator, group = modified },
+					{ get_display_name() .. " " .. separator, group = modified },
 					{
 						" " .. vim.api.nvim_win_get_number(props.win),
 						group = vim.api.nvim_get_current_win() == props.win and "Character" or "DevIconWindows",
