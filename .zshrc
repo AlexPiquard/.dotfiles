@@ -68,7 +68,7 @@ export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml,$HOME/.config/lazygit/th
 alias ll='ls -l'
 
 # Ctrl+Delete: kill the word forward (default is Alt+d)
-# Ctrl+Backspace is handled in alacritty.toml because this key is unknown here
+# Ctrl+Backspace is handled in terminal config because this key is unknown here
 bindkey '^[[3;5~' kill-word
 
 # rust

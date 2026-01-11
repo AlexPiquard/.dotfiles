@@ -1,3 +1,4 @@
+ZSH_TMUX_AUTOSTART=true
 
 [[ ! -f $ZSH/oh-my-zsh.sh ]] || source $ZSH/oh-my-zsh.sh
 
@@ -11,3 +12,6 @@ root_dir="/usr/share/zsh/plugins"
 # Activate ZSH plugins installed at root
 [[ ! -f $root_dir/zsh-autosuggestions/zsh-autosuggestions.zsh ]] || source $root_dir/zsh-autosuggestions/zsh-autosuggestions.zsh
 [[ ! -f $root_dir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] || source $root_dir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Activate default ZSH plugins
+[[ ! -f $HOME/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh ]] || source $HOME/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh

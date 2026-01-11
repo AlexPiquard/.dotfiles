@@ -1,6 +1,6 @@
 # First install
 
-- install alacritty
+- install alacritty or kitty
 - install 1password
 - zsh
     - install
@@ -18,7 +18,7 @@
     - install
     - `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
     - `tmux source ~/.config/tmux/tmux.conf`
-- auto theming: `sudo systemctl enable AlacrittyAutoTheme`
+- auto theming: `sudo systemctl enable TerminalSystemTheme`
 
 # Browsers
 
@@ -32,6 +32,4 @@
 
 # TODO
 
-- use a terminal supporting images, and use snacks.image (kitty or ghostty)
 - 1password integration with browsers not working because root owning is required for browser bin and parent folder 
-- fix alacritty borders being white after restart (restarting AlacrittyAutoTheme.service fixes it ?)
