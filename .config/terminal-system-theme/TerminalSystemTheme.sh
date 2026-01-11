@@ -12,7 +12,7 @@ dbus-monitor --profile "interface='$interface',path=$monitor_path,member=$monito
 		if [ $count = 3 ]; then
 			theme="$(dconf read /org/gnome/desktop/interface/color-scheme)"
 
-			~/.config/alacritty/auto-theme/update-themes.sh "$theme"
+			~/.config/terminal-system-theme/update-themes.sh "$theme"
 			count=0
-		fi 
+		fi
 	done

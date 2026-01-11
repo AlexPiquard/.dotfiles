@@ -23,5 +23,5 @@ bindings = [
 
 [general]
 import = [
-	"~/.config/alacritty/auto-theme/theme.toml"
+	"~/.config/alacritty/theme.toml"
 ]
