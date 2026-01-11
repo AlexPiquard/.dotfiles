@@ -24,6 +24,7 @@ return {
 		statuscolumn = { enabled = true },
 		-- just indent visual guides
 		indent = { enabled = true },
+		image = { enabled = true },
 	},
 	keys = {
 		{
