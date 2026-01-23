@@ -17,10 +17,10 @@ return {
 		end,
 	},
 	config = function ()
-		local colorscheme = vim.fn.system("colorscheme")
-		if (colorscheme:match("tokyonight") == nil) then
-			vim.cmd("colorscheme tokyonight")
-		end
+		-- local colorscheme = vim.fn.system("colorscheme")
+		-- if (colorscheme:match("tokyonight") == nil) then
+		-- 	vim.cmd("colorscheme tokyonight")
+		-- end
 		-- TODO: terminal bg color is wrong (only in var) after set-themes (echo -e "\033]11;?\007"), its working after restarting alacritty
 	end
 }

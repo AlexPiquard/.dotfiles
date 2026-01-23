@@ -143,3 +143,4 @@ use **B** instead of **}**
 - blink-ripgrep completions appear before lsp completions
 - snacks.scratch
 - https://github.com/chrisgrieser/nvim-scissors
+- something detecting malicious/dangerous code when opening project (eval, etc)
