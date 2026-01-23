@@ -1,3 +1,5 @@
+#!/bin/bash
+
 theme="$1"
 if [ ! $theme ]; then
     theme="'prefer-dark'"
