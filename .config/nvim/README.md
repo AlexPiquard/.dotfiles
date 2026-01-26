@@ -141,6 +141,5 @@ use **B** instead of **}**
 - fyler.nvim
 - no colors in custom lsp hover
 - blink-ripgrep completions appear before lsp completions
-- snacks.scratch
-- https://github.com/chrisgrieser/nvim-scissors
+- https://github.com/michaelb/sniprun
 - something detecting malicious/dangerous code when opening project (eval, etc)

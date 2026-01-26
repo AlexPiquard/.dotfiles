@@ -1,3 +1,5 @@
+--- Custom LSP Hover (K keymap), borders, quadrant aware, language, wrapped text, markdown
+---
 ---|fS "doc: Type definitions"
 
 ---@class hover.style Style for the hover window.
@@ -451,14 +453,6 @@ hover.hover = function(window)
 
 		vim.api.nvim_win_set_cursor(hover.window, { 1, 0 })
 		hover.update_quad(hover.quad, true)
-
-		-- Markdown rendering.
-		-- if package.loaded["markview"] then
-		-- 	package.loaded["markview"].render(hover.buffer, {
-		-- 		enable = true,
-		-- 		hybrid_mode = false,
-		-- 	})
-		-- end
 	end)
 
 	---|fE
