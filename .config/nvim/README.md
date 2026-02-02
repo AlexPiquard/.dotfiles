@@ -143,3 +143,5 @@ use **B** instead of **}**
 - blink-ripgrep completions appear before lsp completions
 - https://github.com/michaelb/sniprun
 - something detecting malicious/dangerous code when opening project (eval, etc)
+- https://github.com/Wansmer/treesj
+- https://github.com/rareitems/printer.nvim

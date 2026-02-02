@@ -53,6 +53,8 @@ vim.env.PATH = table.concat({ vim.fn.stdpath("data"), "mason", "bin" }, sep) .. 
 -- folds, none by default
 vim.opt.foldmethod = "expr"
 vim.opt.foldlevelstart = 99
+-- use Neovim nightly branch
+-- vim.o.fillchars = 'eob: ,fold: ,foldopen:,foldsep: ,foldinner: ,foldclose:' -- fold icon (waiting for nightly)
 
 -- Copies in nvim applies to system clipboard
 vim.api.nvim_set_option("clipboard", "unnamed")
