@@ -7,6 +7,8 @@ return {
 		preset = "helix",
 		spec = {
 			{ "<leader>o", group = "OpenCode" },
+			{ "<leader>d", group = "Debug" },
+			{ "<leader>f", group = "Finders" },
 		},
 	},
 	keys = {

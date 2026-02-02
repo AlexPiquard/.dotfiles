@@ -5,7 +5,6 @@ local languages = {
 	"vim",
 	"vimdoc",
 	"typescript",
-	"typescriptreact",
 	"javascript",
 	"tsx",
 	"markdown",
