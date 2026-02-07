@@ -44,6 +44,9 @@ source <(fzf --zsh)
 # zoxide
 eval "$(zoxide init zsh)"
 
+# tirith
+eval "$(tirith init)"
+
 # oh my zsh
 source $HOME/oh-my-zsh.zsh
 
