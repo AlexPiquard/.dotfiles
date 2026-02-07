@@ -22,9 +22,8 @@
 
 # Browsers
 
-`./.config/<zen/firefox/helium>/install.sh`
-
-(installed manually to get 1password integration)
+firefox: `https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-firefox-deb-package-for-debian-based-distributions`
+or `./.config/<zen/glide/helium>/install.sh` for zen/helium/glide
 
 # Rust
 
