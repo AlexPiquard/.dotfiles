@@ -8,6 +8,19 @@ return {
 			globalstatus = true,
 		},
 		sections = {
+			lualine_b = {
+				"branch",
+				"diff",
+				{
+					"diagnostics",
+					symbols = {
+						error = "󰅙 ",
+						warn = " ",
+						info = "󰋼 ",
+						hint = "󰌵 ",
+					},
+				},
+			},
 			-- show recording
 			lualine_x = {
 				{

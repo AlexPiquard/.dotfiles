@@ -28,7 +28,3 @@ or `./.config/<zen/glide/helium>/install.sh` for zen/helium/glide
 # Rust
 
 `curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh`
-
-# TODO
-
-- 1password integration with browsers not working because root owning is required for browser bin and parent folder 

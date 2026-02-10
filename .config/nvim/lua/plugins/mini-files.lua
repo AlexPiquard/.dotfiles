@@ -55,6 +55,7 @@ vim.api.nvim_create_autocmd("User", {
 
 return {
 	"nvim-mini/mini.files",
+	enabled = false,
 	lazy = false,
 	dependencies = {
 		"nvim-mini/mini.icons",

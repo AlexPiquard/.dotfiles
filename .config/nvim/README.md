@@ -85,6 +85,7 @@ To edit the default lsp config provided by lspconfig, create a file at `.config/
 | git blame                   | <leader>hb |
 | bookmarks (arrow)           | q          |
 | buffer bookmarks (arrow)    | m          |
+| debugger                    | <leader>d  |
 
 
 ## surround/delimiters
@@ -139,9 +140,6 @@ use **B** instead of **}**
 
 - fix markdown paragraphs
 - fyler.nvim
-- no colors in custom lsp hover
-- blink-ripgrep completions appear before lsp completions
-- https://github.com/michaelb/sniprun
 - something detecting malicious/dangerous code when opening project (eval, etc)
 - https://github.com/Wansmer/treesj
 - https://github.com/rareitems/printer.nvim

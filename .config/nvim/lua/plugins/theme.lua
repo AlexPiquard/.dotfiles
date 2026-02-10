@@ -14,6 +14,9 @@ return {
 			-- Opencode missing groups
 			hl.OpencodeDiffAdd = { bg = c.diff.add }
 			hl.OpencodeDiffDelete = { bg = c.diff.delete }
+			-- Fyler git colors
+			hl.FylerGitModified = { fg = c.git.change }
+			hl.FylerGitUntracked = { fg = c.git.add }
 		end,
 	},
 	config = function(_, opts)

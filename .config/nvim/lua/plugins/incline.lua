@@ -1,6 +1,7 @@
 local separator = " "
 
 -- buffer name and related info at top right window corner
+-- TODO: show todo-comments
 return {
 	"b0o/incline.nvim",
 	event = "VeryLazy",
@@ -87,7 +88,7 @@ return {
 				end
 
 				local function get_diagnostic_label()
-					local icons = { error = "󰅚 ", warn = "󰀪 ", info = "󰋽 ", hint = "󰌶 " }
+					local icons = { error = "󰅙 ", warn = " ", info = "󰋼 ", hint = "󰌵 " }
 					local label = {}
 
 					for severity, icon in pairs(icons) do

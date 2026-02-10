@@ -1,32 +1,51 @@
 return {
-	-- NOT USING: THERE IS STILL SOME BUG
 	-- A neovim file manager which can edit file system like a buffer with tree view
 	"A7Lavinraj/fyler.nvim",
 	dependencies = { "nvim-mini/mini.icons" },
-	enabled = false,
 	lazy = false,
 	opts = {
 		hooks = {},
 		integrations = {
 			icon = "mini_icons",
+			-- opens file in current window
+			winpick = "none",
 		},
 		views = {
 			finder = {
 				close_on_select = false,
-				confirm_simple = false,
+				-- Skip confirmation for simple operations
+				confirm_simple = true,
 				default_explorer = false,
 				delete_to_trash = false,
-				git_status = {
-					enabled = true,
-					symbols = {
-						Untracked = "?",
-						Added = "+",
-						Modified = "*",
-						Deleted = "x",
-						Renamed = ">",
-						Copied = "~",
-						Conflict = "!",
-						Ignored = "#",
+				columns_order = { "permission", "size", "git", "diagnostic" },
+				columns = {
+					git = {
+						enabled = true,
+						symbols = {
+							Untracked = "?",
+							Added = "+",
+							Modified = "~",
+							Deleted = "-",
+							Renamed = "→",
+							Copied = "c",
+							Conflict = "!",
+							Ignored = " ",
+						},
+					},
+					diagnostic = {
+						enabled = true,
+						symbols = {
+							Error = "󰅙 ",
+							Warn = " ",
+							Info = "󰋼 ",
+							Hint = "󰌵 ",
+						},
+					},
+					permission = {
+						enabled = true,
+					},
+					size = {
+						enabled = true,
 					},
 				},
 				icon = {
@@ -36,8 +55,10 @@ return {
 				},
 				indentscope = {
 					enabled = true,
-					group = "FylerIndentMarker",
-					marker = "│",
+					markers = {
+						{ "│", "FylerIndentMarker" },
+						{ "└", "FylerIndentMarker" },
+					},
 				},
 				mappings = {
 					["q"] = "CloseView",
@@ -57,18 +78,21 @@ return {
 					silent = true,
 				},
 				follow_current_file = true,
+				-- Automatically updated finder on file system events
 				watcher = {
 					enabled = false,
 				},
 				win = {
 					border = vim.o.winborder == "" and "single" or vim.o.winborder,
 					buf_opts = {
-						filetype = "fyler",
-						syntax = "fyler",
+						bufhidden = "hide",
 						buflisted = false,
 						buftype = "acwrite",
 						expandtab = true,
+						filetype = "fyler",
 						shiftwidth = 2,
+						syntax = "fyler",
+						swapfile = false,
 					},
 					kind = "replace",
 					kinds = {
@@ -122,15 +146,15 @@ return {
 						cursorline = false,
 						number = false,
 						relativenumber = false,
+						signcolumn = "no",
 						winhighlight = "Normal:FylerNormal,NormalNC:FylerNormalNC",
 						wrap = false,
-						signcolumn = "no",
 					},
 				},
 			},
 		},
 	},
 	keys = {
-		{ "<C-n>", "<Cmd>Fyler kind=split_left_most<Cr>", desc = "Open Fyler View" },
+		{ "<C-n>", "<Cmd>Fyler kind=float<Cr>", desc = "Open Fyler View" },
 	},
 }
