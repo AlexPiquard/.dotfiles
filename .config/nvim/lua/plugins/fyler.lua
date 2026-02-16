@@ -12,7 +12,8 @@ return {
 		},
 		views = {
 			finder = {
-				close_on_select = false,
+				-- forced to true when kind=float|replace
+				close_on_select = true,
 				-- Skip confirmation for simple operations
 				confirm_simple = true,
 				default_explorer = false,
@@ -85,7 +86,7 @@ return {
 				follow_current_file = true,
 				-- Automatically updated finder on file system events
 				watcher = {
-					enabled = false,
+					enabled = true,
 				},
 				win = {
 					border = vim.o.winborder == "" and "single" or vim.o.winborder,

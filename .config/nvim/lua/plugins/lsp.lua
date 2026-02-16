@@ -75,7 +75,8 @@ return {
 			"jdtls",
 			"biome",
 			"gopls",
-			"rust_analyzer"
+			"rust_analyzer",
+			"bashls"
 		},
 	},
 	dependencies = {

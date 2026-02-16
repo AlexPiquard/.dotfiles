@@ -1,17 +1,24 @@
 #!/bin/bash
 
-tarball_dir="$HOME/.tarball-installations"
-install_dir="$tarball_dir/helium"
+opt_dir="/opt"
+install_dir="$opt_dir/helium"
 executable_path="$install_dir/helium"
 icon_path="$install_dir/product_logo_256.png"
-desktop_file="$HOME/.local/share/applications/helium.desktop"
+desktop_file="/usr/share/applications/helium.desktop"
 
-cd $tarball_dir 
+cd $opt_dir 
 rm -rf $install_dir
 mkdir $install_dir
 cd $install_dir
-url="$(curl -s https://api.github.com/repos/imputnet/helium-linux/releases/latest | jq -r '.assets[] | select(.name | test("helium-.*-x86_64_linux\\.tar\\.xz$")) | .browser_download_url')"
+
+if [[ ! -z $1 ]]; then
+    url=$1
+else
+	url="$(curl -s https://api.github.com/repos/imputnet/helium-linux/releases/latest | jq -r '.assets[] | select(.name | test("helium-.*-x86_64_linux\\.tar\\.xz$")) | .browser_download_url')"
+fi
+	
 curl -L "$url" | tar xJvf - --strip-components=1
+sudo chown -R root:root $install_dir 
 
 sudo ln -s /opt/google/chrome/WidevineCdm $install_dir/
 
