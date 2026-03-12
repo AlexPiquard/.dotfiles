@@ -1,7 +1,7 @@
 return {
 	-- Buffer removing (unshow, delete, wipeout), which saves window layout
 	"nvim-mini/mini.bufremove",
-	event = "User FilePost",
+	event = "BufReadPost",
 	config = true,
 	keys = {
 		{

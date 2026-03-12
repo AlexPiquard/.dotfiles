@@ -1,7 +1,7 @@
 return {
 	-- git stuff
 	"lewis6991/gitsigns.nvim",
-	event = "User FilePost",
+	event = "BufReadPost",
 	opts = {
 		signs = {
 			delete = { text = "󰍵" },

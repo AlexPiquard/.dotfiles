@@ -1,6 +1,5 @@
 return {
 	"mfussenegger/nvim-dap",
-	event = "User FilePost",
 	dependencies = {
 		"theHamsta/nvim-dap-virtual-text",
 		"rcarriga/nvim-dap-ui",

@@ -35,14 +35,6 @@
 --   delete = "#e26a75",
 -- },
 
-vim.api.nvim_create_autocmd("ColorScheme", {
-	callback = function()
-		vim.defer_fn(function()
-			require("opencode.ui.highlight").setup()
-		end, 10)
-	end,
-})
-
 return {
 	"folke/tokyonight.nvim",
 	lazy = false,

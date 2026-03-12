@@ -6,7 +6,6 @@ return {
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
 		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.icons" },
-		lazy = false,
 		ft = { "markdown", "opencode_output" },
 		---@module 'render-markdown'
 		---@type render.md.UserConfig

@@ -60,7 +60,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 -- mason-lspconfig is linking the two and enabling all installed servers
 return {
 	"mason-org/mason-lspconfig.nvim",
-	event = "User FilePost",
 	opts = {
 		-- add languages here
 		ensure_installed = {
@@ -76,7 +75,7 @@ return {
 			"biome",
 			"gopls",
 			"rust_analyzer",
-			"bashls"
+			"bashls",
 		},
 	},
 	dependencies = {
@@ -99,7 +98,6 @@ return {
 		},
 		{
 			"neovim/nvim-lspconfig",
-			event = "User FilePost",
 		},
 	},
 }

@@ -1,6 +1,6 @@
 return {
 	"sphamba/smear-cursor.nvim",
-	event = "User FilePost",
+	event = "VeryLazy",
 	enabled = false,
 
 	opts = {

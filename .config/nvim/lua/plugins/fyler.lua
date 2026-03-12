@@ -2,7 +2,6 @@ return {
 	-- A neovim file manager which can edit file system like a buffer with tree view
 	"A7Lavinraj/fyler.nvim",
 	dependencies = { "nvim-mini/mini.icons" },
-	lazy = false,
 	opts = {
 		hooks = {},
 		integrations = {

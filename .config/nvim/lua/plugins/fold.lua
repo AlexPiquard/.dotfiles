@@ -2,7 +2,7 @@ return {
 	-- better fold (zc)
     {
 		"kevinhwang91/nvim-ufo",
-		event = "User FilePost",
+		event = "BufReadPost",
 		dependencies = "kevinhwang91/promise-async",
 		opts = {}
 	},

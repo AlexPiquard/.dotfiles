@@ -1,7 +1,6 @@
 return {
 	-- Bookmark your files, separated by project, and quickly navigate through them.
 	"otavioschwanck/arrow.nvim",
-	lazy = false,
 	dependencies = {
 		{ "echasnovski/mini.icons" },
 	},
@@ -10,6 +9,6 @@ return {
 		leader_key = "q",
 		-- per buffer mappings
 		buffer_leader_key = "m",
-		index_keys = "hijklmnopuabcfgqrtwxyz"
+		index_keys = "hijklmnopuabcfgqrtwxyz",
 	},
 }

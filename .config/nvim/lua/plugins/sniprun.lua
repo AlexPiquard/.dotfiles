@@ -1,7 +1,6 @@
 return {
 	-- A neovim plugin to run lines/blocs of code (independently of the rest of the file)
 	"michaelb/sniprun",
-	lazy = false,
 	branch = "master",
 
 	build = "sh install.sh",

@@ -1,6 +1,6 @@
 return {
 	"jake-stewart/multicursor.nvim",
-	event = "User FilePost",
+	event = "BufReadPost",
 	branch = "1.0",
 	config = function()
 		local mc = require("multicursor-nvim")

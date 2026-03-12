@@ -4,7 +4,7 @@ local separator = " "
 -- TODO: show todo-comments
 return {
 	"b0o/incline.nvim",
-	event = "VeryLazy",
+	event = "BufReadPost",
 	keys = {
 		{
 			"<A-n>",

@@ -1,8 +1,7 @@
 return {
 	"sudo-tee/opencode.nvim",
-	lazy = false,
 	cond = function()
-		return vim.fn.executable("opencode") == 1;
+		return vim.fn.executable("opencode") == 1
 	end,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
@@ -10,7 +9,7 @@ return {
 		-- for file mentions and commands completion
 		"saghen/blink.cmp",
 
-		-- for file mentions picker, pick only one
+		-- for file mentions picker
 		"folke/snacks.nvim",
 	},
 	opts = {
@@ -23,5 +22,9 @@ return {
 				},
 			},
 		},
+	},
+	keys = {
+		-- every opencode command will lazy load the plugin and work
+		{ "<leader>o", mode = "n", desc = "Enable Opencode" },
 	},
 }

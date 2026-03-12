@@ -1,7 +1,7 @@
 return {
 	-- Navigate the code with search labels
 	"folke/flash.nvim",
-	event = "VeryLazy",
+	event = "BufReadPost",
 	---@type Flash.Config
 	opts = {
 		modes = {
