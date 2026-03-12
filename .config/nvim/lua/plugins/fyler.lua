@@ -65,7 +65,7 @@ return {
 					["q"] = "CloseView",
 					["<C-n>"] = "CloseView",
 					["<CR>"] = "Select",
-					["l"] = "Select",
+					-- ["l"] = "Select",
 					["<C-t>"] = "SelectTab",
 					["|"] = "SelectVSplit",
 					["v"] = "SelectVSplit",

@@ -139,7 +139,6 @@ use **B** instead of **}**
 # TODO
 
 - fix markdown paragraphs
-- fyler.nvim
 - something detecting malicious/dangerous code when opening project (eval, etc)
 - https://github.com/Wansmer/treesj
 - https://github.com/rareitems/printer.nvim

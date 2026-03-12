@@ -45,7 +45,7 @@ source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 
 # tirith
-eval "$(tirith init)"
+[[ ! -f /home/linuxbrew/.linuxbrew/bin/tirith ]] || eval "$(tirith init)"
 
 # oh my zsh
 source $HOME/oh-my-zsh.zsh

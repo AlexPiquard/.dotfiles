@@ -13,4 +13,3 @@ zsh-syntax-highlighting
 starship
 zoxide
 tree-sitter-cli
-tirith
