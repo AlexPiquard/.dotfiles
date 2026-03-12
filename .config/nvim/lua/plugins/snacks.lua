@@ -4,7 +4,7 @@ end
 
 return {
 	"folke/snacks.nvim",
-	priority = 1000,
+	priority = 900,
 	lazy = false,
 	---@type snacks.config
 	opts = {
