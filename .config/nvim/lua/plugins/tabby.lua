@@ -1,7 +1,7 @@
--- list of tabs at top
 return {
+	-- list of tabs at top
 	"nanozuki/tabby.nvim",
-	lazy = false,
+	event = "BufReadPost",
 	config = function()
 		---@type TabbyConfig
 		require("tabby").setup({

@@ -7,10 +7,9 @@ o.termguicolors = true
 o.laststatus = 3
 o.showmode = false
 
-o.clipboard = "unnamedplus"
+o.clipboard = "unnamed"
 o.cursorline = true
 o.cursorlineopt = "number"
-
 o.wrap = false
 
 o.ignorecase = true
@@ -56,8 +55,7 @@ vim.opt.foldlevelstart = 99
 -- use Neovim nightly branch
 -- vim.o.fillchars = 'eob: ,fold: ,foldopen:,foldsep: ,foldinner: ,foldclose:' -- fold icon (waiting for nightly)
 
--- Copies in nvim applies to system clipboard
-vim.api.nvim_set_option("clipboard", "unnamed")
-
 -- overridden by guess-indent.nvim
 -- vim.cmd('set noexpandtab tabstop=2 shiftwidth=0 softtabstop=0 smarttab')
+
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"

@@ -146,3 +146,4 @@ use **B** instead of **}**
 - https://github.com/mrcjkb/rustaceanvim
 - https://github.com/anuvyklack/windows.nvim
 - make <leader>fr opens in the same previous order
+- opencode diff view when asking permission
