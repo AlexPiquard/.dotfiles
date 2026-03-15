@@ -60,6 +60,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 -- mason-lspconfig is linking the two and enabling all installed servers
 return {
 	"mason-org/mason-lspconfig.nvim",
+	cmd = "LspInfo",
 	opts = {
 		-- add languages here
 		ensure_installed = {
@@ -76,6 +77,12 @@ return {
 			"gopls",
 			"rust_analyzer",
 			"bashls",
+		},
+		automatic_enable = {
+			exclude = {
+				-- enabled and handled by rustaceanvim
+				"rust_analyzer",
+			},
 		},
 	},
 	dependencies = {
