@@ -2,7 +2,7 @@ return {
     -- Supercharge the rust experience
 	"mrcjkb/rustaceanvim",
 	version = "^8",
-	lazy = false, -- This plugin is already lazy
+    ft = "rust",
 	init = function()
 		vim.g.rustaceanvim = {
             tools = {

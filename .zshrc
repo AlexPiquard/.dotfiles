@@ -51,7 +51,7 @@ eval "$(zoxide init zsh)"
 source $HOME/oh-my-zsh.zsh
 
 # bun completions
-[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 # bun bin
 export PATH="$HOME/.bun/bin:$PATH"
 
@@ -82,3 +82,6 @@ fi
 
 # gstreamer
 export GST_PLUGIN_PATH="/usr/lib/x86_64-linux-gnu/gstreamer-1.0/"
+
+# deno
+[ -s $HOME/.deno/env ] && . "$HOME/.deno/env"

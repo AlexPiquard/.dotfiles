@@ -138,12 +138,10 @@ use **B** instead of **}**
 
 # TODO
 
-- fix markdown paragraphs (https://github.com/toppair/peek.nvim)
+- fix markdown paragraphs
 - something detecting malicious/dangerous code when opening project (eval, etc)
 - auto close unused buffers
 - https://github.com/Wansmer/treesj
 - https://github.com/rareitems/printer.nvim
-- https://github.com/mrcjkb/rustaceanvim
 - https://github.com/anuvyklack/windows.nvim
-- make <leader>fr opens in the same previous order
 - opencode diff view when asking permission

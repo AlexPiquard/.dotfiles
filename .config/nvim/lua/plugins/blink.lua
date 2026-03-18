@@ -27,7 +27,7 @@ return {
 	-- autocomplete & suggestions
 	"saghen/blink.cmp",
 	version = "*", -- updates at version, not commit
-	event = { "InsertEnter", "CmdLineEnter" },
+	event = "BufReadPost",
 
 	dependencies = {
 		"rafamadriz/friendly-snippets",

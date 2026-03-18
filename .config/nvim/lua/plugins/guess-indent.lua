@@ -1,7 +1,7 @@
 return {
 	-- apply neovim indent config from what file already contains (tab, spaces, etc)
 	"NMAC427/guess-indent.nvim",
-	lazy = false,
+	event = "BufReadPre",
 	opts = {
 		on_tab_options = {
 			["tabstop"] = 4,
