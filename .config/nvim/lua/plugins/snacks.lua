@@ -92,6 +92,13 @@ return {
 			desc = "Find Files",
 		},
 		{
+			"<leader>fn",
+			function()
+				Snacks.picker.notifications()
+			end,
+			desc = "Notification History",
+		},
+		{
 			"<leader>fw",
 			function()
 				Snacks.picker.grep()
