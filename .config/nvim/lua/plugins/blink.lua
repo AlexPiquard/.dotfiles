@@ -23,6 +23,22 @@ local configurate = function()
 	})
 end
 
+local function get_mini_icon(ctx)
+	if ctx.source_name == "Path" then
+		local is_unknown_type =
+			vim.tbl_contains({ "link", "socket", "fifo", "char", "block", "unknown" }, ctx.item.data.type)
+		local mini_icon, mini_hl, _ = require("mini.icons").get(
+			is_unknown_type and "os" or ctx.item.data.type,
+			is_unknown_type and "" or ctx.label
+		)
+		if mini_icon then
+			return mini_icon, mini_hl
+		end
+	end
+	local mini_icon, mini_hl, _ = require("mini.icons").get("lsp", ctx.kind)
+	return mini_icon, mini_hl
+end
+
 return {
 	-- autocomplete & suggestions
 	"saghen/blink.cmp",
@@ -44,6 +60,9 @@ return {
 
 		-- adds words from entire project as completions
 		"mikavilpas/blink-ripgrep.nvim",
+
+		-- better colors for entries
+		"xzbdmw/colorful-menu.nvim",
 	},
 
 	opts_extend = { "sources.default" },
@@ -121,46 +140,47 @@ return {
 				max_height = 30,
 				draw = {
 					treesitter = { "lsp" },
-					columns = { { "kind_icon" }, { "label", "label_description", "kind", gap = 1 } },
+					columns = { { "kind_icon" }, { "label", "kind", gap = 1 } },
 					components = {
 						kind_icon = {
 							text = function(ctx)
-								local icon, _, _ = require("mini.icons").get("lsp", ctx.kind)
-								-- if LSP source, check for color derived from documentation
-								if ctx.item.source_name == "LSP" then
-									local color_item = require("nvim-highlight-colors").format(
-										ctx.item.documentation,
-										{ kind = ctx.kind }
-									)
-									if color_item and color_item.abbr ~= "" then
-										icon = color_item.abbr
-									end
-								end
-
-								return icon .. ctx.icon_gap
+								local kind_icon, kind_hl = get_mini_icon(ctx)
+								return kind_icon
 							end,
 							-- (optional) use highlights from mini.icons
 							highlight = function(ctx)
-								local _, hl, _ = require("mini.icons").get("lsp", ctx.kind)
-								-- if LSP source, check for color derived from documentation
-								if ctx.item.source_name == "LSP" then
-									local color_item = require("nvim-highlight-colors").format(
-										ctx.item.documentation,
-										{ kind = ctx.kind }
-									)
-									if color_item and color_item.abbr_hl_group then
-										hl = color_item.abbr_hl_group
-									end
-								end
-
+								local _, hl = get_mini_icon(ctx)
 								return hl
 							end,
 						},
 						kind = {
 							-- (optional) use highlights from mini.icons
 							highlight = function(ctx)
-								local _, hl, _ = require("mini.icons").get("lsp", ctx.kind)
+								local _, hl = get_mini_icon(ctx)
 								return hl
+							end,
+						},
+						label = {
+							text = function(ctx)
+								local highlights_info = require("colorful-menu").blink_highlights(ctx)
+								if highlights_info ~= nil then
+									-- Or you want to add more item to label
+									return highlights_info.label
+								else
+									return ctx.label
+								end
+							end,
+							highlight = function(ctx)
+								local highlights = {}
+								local highlights_info = require("colorful-menu").blink_highlights(ctx)
+								if highlights_info ~= nil then
+									highlights = highlights_info.highlights
+								end
+								for _, idx in ipairs(ctx.label_matched_indices) do
+									table.insert(highlights, { idx, idx + 1, group = "BlinkCmpLabelMatch" })
+								end
+								-- Do something else
+								return highlights
 							end,
 						},
 					},
