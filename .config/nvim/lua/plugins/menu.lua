@@ -1,5 +1,6 @@
 return {
 	-- rightclick & color menu
+	-- TODO: https://github.com/max397574/colortils.nvim
 	"nvzone/volt",
 	{
 		"nvzone/menu",

@@ -70,7 +70,7 @@ return {
 					["v"] = "SelectVSplit",
 					["-"] = "SelectSplit",
 					["s"] = "SelectSplit",
-					["p"] = "GotoParent",
+					-- ["p"] = "GotoParent",
 					["="] = "GotoCwd",
 					["."] = "GotoNode",
 					["#"] = "CollapseAll",
