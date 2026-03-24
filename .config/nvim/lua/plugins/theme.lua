@@ -62,6 +62,8 @@ return {
 			hl.TabLine = { fg = c.fg_dark, bg = c.bg_statusline }
 			hl.TabLineSel = { fg = c.blue, bg = c.fg_gutter }
 			hl.TabLineFill = { fg = c.fg_sidebar, bg = c.bg }
+			-- Flash
+			hl.FlashLabel = { fg = c.bg, bg = "#d20065"}
 		end,
 	},
 	config = function(_, opts)
