@@ -60,7 +60,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 -- mason-lspconfig is linking the two and enabling all installed servers
 return {
 	"mason-org/mason-lspconfig.nvim",
-	cmd = "LspInfo",
+	event = "BufReadPre",
 	opts = {
 		-- add languages here
 		ensure_installed = {
