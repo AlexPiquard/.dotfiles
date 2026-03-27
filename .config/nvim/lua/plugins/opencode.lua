@@ -25,6 +25,6 @@ return {
 	},
 	keys = {
 		-- every opencode command will lazy load the plugin and work
-		{ "<leader>o", mode = "n", desc = "Enable Opencode" },
+		{ "<leader>o", mode = { "n", "v" }, desc = "Enable Opencode" },
 	},
 }

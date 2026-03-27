@@ -145,3 +145,4 @@ use **B** instead of **}**
 - https://github.com/rareitems/printer.nvim
 - https://github.com/anuvyklack/windows.nvim
 - opencode diff view when asking permission
+- auto indent when jumping into a code block

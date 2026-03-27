@@ -4,6 +4,7 @@ return {
 	dependencies = {
 		{ "echasnovski/mini.icons" },
 	},
+	event = "BufReadPost",
 	opts = {
 		show_icons = true,
 		leader_key = "q",
