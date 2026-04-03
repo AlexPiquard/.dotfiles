@@ -1,4 +1,12 @@
 return {
-	"eandrju/cellular-automaton.nvim",
-	cmd = "CellularAutomaton",
+	{
+		"eandrju/cellular-automaton.nvim",
+		cmd = "CellularAutomaton",
+	},
+	{
+		"aikhe/wrapped.nvim",
+		dependencies = { "nvzone/volt" },
+		cmd = { "WrappedNvim" },
+		opts = {},
+	},
 }

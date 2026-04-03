@@ -50,6 +50,11 @@ To edit the default lsp config provided by lspconfig, create a file at `.config/
 | close tab                  | alt k    |
 | previous tab               | alt ,    |
 | next tab                   | alt ;    |
+| empty line and insert mode | S        |
+| empty at right             | D        |
+| empty at right and insert  | C        |
+| insert at end              | A        |
+| insert at beginning        | I        |
 
 
 | plugin action               | keymap     |
