@@ -4,8 +4,6 @@
 
 ---@class hover.style Style for the hover window.
 ---
----@field condition? fun(client_name: string, result: table, context: table): boolean Condition for this style.
----
 ---@field width? integer | fun(client_name: string, result: table, context: table): integer Window width.
 ---@field height? integer | fun(client_name: string, result: table, context: table): integer Window height.
 ---@field winhl? string | fun(client_name: string, result: table, context: table): string Window's winhighlight.
@@ -27,79 +25,39 @@
 --- Custom LSP hover for Neovim.
 local hover = {}
 
----@type table<string, hover.style>
+---@type hover.style
 hover.config = {
-	default = {
-		width = function()
-			return math.floor(vim.o.columns * 0.5)
-		end,
-	},
-
-	lua_ls = {
-		condition = function(client_name)
-			return client_name == "lua_ls"
-		end,
-
-		winopts = {
-			footer_pos = "right",
-			footer = {
-				{ " 󰢱 LuaLS ", "@function" },
-			},
-		},
-	},
-
-	basedpyright = {
-		condition = function(client_name)
-			return client_name == "basedpyright"
-		end,
-
-		winopts = {
-			footer_pos = "right",
-			footer = {
-				{ " 󰌠 BasedPyright ", "@constant" },
-			},
-		},
+	width = function()
+		return math.floor(vim.o.columns * 0.5)
+	end,
+	winopts = {
+		footer_pos = "right",
 	},
 }
 
 --- Gets LSP style
 ---@param ... any
 ---@return hover.style__static
-local function get_style(...)
+local function get_style(client_name, buf, ...)
 	---|fS
 
-	local keys = vim.tbl_keys(hover.config)
-	local result = hover.config.default
+	local result = hover.config
 
-	table.sort(keys)
-
-	for _, key in ipairs(keys) do
-		if key ~= "default" then
-			local val = hover.config[key]
-			local ran_cond, cond = pcall(val.condition, ...)
-
-			if ran_cond and cond then
-				result = vim.tbl_deep_extend("force", result, val)
-				break
-			end
-		end
-	end
-
-	local final_val = {}
+	local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(buf), ":t")
+	local icon, _ = require("mini.icons").get("file", filename)
+	result.winopts.footer = { { " " .. icon .. " " .. client_name .. " ", "FloatBorder" } }
 
 	for k, v in pairs(result) do
-		if type(v) ~= "function" then
-			final_val[k] = v
-		elseif k ~= "condition" then
-			local can_eval, value = pcall(v, ...)
-
+		if type(v) == "function" then
+			local can_eval, value = pcall(v, client_name, ...)
 			if can_eval then
-				final_val[k] = value
+				result[k] = value
 			end
 		end
 	end
 
-	return final_val
+	--- @type hover.style__static
+	return result
 
 	---|fE
 end
@@ -348,7 +306,7 @@ hover.hover = function(window)
 		local client = vim.lsp.get_client_by_id(client_id) or {}
 		local client_name = client.name or ""
 
-		local _config = get_style(client_name, result, ctx)
+		local _config = get_style(client_name, buf, result, ctx)
 		local W, H = _config.width or math.floor(vim.o.columns * 0.25), _config.height or math.floor(vim.o.lines * 0.4)
 
 		_config.winopts = vim.tbl_extend("force", config or {}, _config.winopts or {})
