@@ -95,8 +95,8 @@ return {
 			},
 		},
 
-		-- show function parameters
-		signature = { enabled = true },
+		-- show function parameters (disabled to use noice)
+		signature = { enabled = false },
 
 		keymap = {
 			preset = "default",

@@ -13,7 +13,10 @@ return {
 		quickfile = { enabled = true },
 		bufdelete = { enabled = true },
 		debug = { enabled = true },
-		notifier = { enabled = true },
+		notifier = {
+			enabled = true,
+			timeout = 5000,
+		},
 		notify = { enabled = true },
 		picker = {
 			enabled = true,
@@ -25,6 +28,7 @@ return {
 		-- just indent visual guides
 		indent = { enabled = true },
 		image = { enabled = true },
+		input = { enabled = true },
 	},
 	keys = {
 		{
@@ -140,5 +144,6 @@ return {
 			end,
 			desc = "Buffer Diagnostics",
 		},
+		{ "<leader>sH", function() Snacks.picker.highlights() end, desc = "Highlights" },
 	},
 }

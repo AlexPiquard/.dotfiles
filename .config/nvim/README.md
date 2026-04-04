@@ -149,5 +149,6 @@ use **B** instead of **}**
 - https://github.com/Wansmer/treesj
 - https://github.com/rareitems/printer.nvim
 - https://github.com/anuvyklack/windows.nvim
-- opencode diff view when asking permission
-- auto indent when jumping into a code block
+- opencode diff view when asking permission (due to asking for edit, no one does this)
+- https://github.com/tpope/vim-commentary to comment a part of line
+- tags navigation
