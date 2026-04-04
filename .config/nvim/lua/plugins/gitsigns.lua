@@ -8,6 +8,11 @@ return {
 			changedelete = { text = "󱕖" },
 		},
 	},
+	config = function(_, opts)
+		require("gitsigns").setup(opts)
+		-- show git signs in scrollbar
+		-- require("scrollbar.handlers.gitsigns").setup()
+	end,
 	keys = {
 		{ "<leader>hr", "<CMD>Gitsigns reset_hunk<CR>", desc = "Git reset hunk", mode = { "n", "v" } },
 		{

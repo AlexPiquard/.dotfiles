@@ -1,6 +1,13 @@
 return {
-    -- TODO: search results and gitsigns ?
+	-- TODO: search results (needs nvim-hlslens) ?
 	"petertriho/nvim-scrollbar",
 	event = "BufReadPost",
-	opts = {},
+	opts = {
+		excluded_filetypes = {
+			"blink-cmp-menu",
+			"noice",
+			"prompt",
+			"aerial"
+		},
+	},
 }
