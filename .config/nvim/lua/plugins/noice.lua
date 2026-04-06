@@ -33,7 +33,8 @@ return {
 		},
 		popupmenu = {
 			-- completion menu inside cmdline
-			enabled = true,
+			-- using blink instead
+			enabled = false,
 		},
 		notify = {
 			-- use snacks.notify
