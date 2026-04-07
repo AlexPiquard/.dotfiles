@@ -68,7 +68,7 @@ export PKG_CONFIG_PATH="/usr/share/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig
 export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml,$HOME/.config/lazygit/theme.yml"
 
 # aliases
-alias ll='ls -l'
+alias ll='ls -la'
 
 # Ctrl+Delete: kill the word forward (default is Alt+d)
 # Ctrl+Backspace is handled in terminal config because this key is unknown here
