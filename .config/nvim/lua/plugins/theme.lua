@@ -42,6 +42,15 @@ return {
 	opts = {
 		style = "moon",
 		light_style = "day",
+		styles = {
+			comments = { italic = true },
+			keywords = { italic = true },
+			functions = {},
+			variables = {},
+			sidebars = "dark",
+			floats = "dark",
+		},
+
 		-- transparent = true,
 		-- styles = {
 		-- 	sidebars = "transparent",
@@ -63,7 +72,7 @@ return {
 			hl.TabLineSel = { fg = c.blue, bg = c.fg_gutter }
 			hl.TabLineFill = { fg = c.fg_sidebar, bg = c.bg }
 			-- Flash
-			hl.FlashLabel = { fg = c.bg, bg = "#d20065"}
+			hl.FlashLabel = { fg = c.bg, bg = "#d20065" }
 		end,
 	},
 	config = function(_, opts)
