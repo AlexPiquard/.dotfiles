@@ -13,18 +13,9 @@
     - using pacman:
         - `sudo pacman -S - < packages.txt`
 - install fonts (`Rec Mono Duotone` and `Symbols Nerd Font Mono`)
-- symlink dotfiles: `stow .`
+- symlink dotfiles: `./stow.sh`
 - tmux
     - install
     - `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
     - `tmux source ~/.config/tmux/tmux.conf`
 - auto theming: `sudo systemctl enable TerminalSystemTheme`
-
-# Browsers
-
-firefox: `https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-firefox-deb-package-for-debian-based-distributions`
-or `./.config/<zen/glide/helium>/install.sh` for zen/helium/glide
-
-# Rust
-
-`curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh`
