@@ -1,4 +1,9 @@
-ZSH_TMUX_AUTOSTART=true
+# tmux
+if [ -n "$HYPRLAND_INSTANCE_SIGNATURE" ]; then
+  ZSH_TMUX_AUTOSTART=false
+else
+  ZSH_TMUX_AUTOSTART=true
+fi
 
 [[ ! -f $ZSH/oh-my-zsh.sh ]] || source $ZSH/oh-my-zsh.sh
 

@@ -152,3 +152,4 @@ use **B** instead of **}**
 - opencode diff view when asking permission (due to asking for edit, no one does this)
 - https://github.com/tpope/vim-commentary to comment a part of line
 - tags navigation
+- without tmux the font change ?
