@@ -71,6 +71,7 @@ To edit the default lsp config provided by lspconfig, create a file at `.config/
 | diagnostics in buffer       | <leader>sD |
 | buffer structure            | <leader>ft |
 | references picker           | gr         |
+| goto definition             | gd
 | go to type definition       | <leader>T  |
 | search and replace          | <leader>sr |
 | rename variable             | grn        |
@@ -152,9 +153,5 @@ use **B** instead of **}**
 - opencode diff view when asking permission (due to asking for edit, no one does this)
 - https://github.com/tpope/vim-commentary to comment a part of line
 - tags navigation
-- without tmux the font change ?
-- no bracket auto-close in search input
-- no "'" auto-close in rust ? for '_
-- no auto-close in readme
 - something in tmux to load a predefined setup in a tab (multiple windows and cmd in each)
-- https://github.com/DNLHC/glance.nvim / https://github.com/rmagatti/goto-preview / https://nvimdev.github.io/
+- https://github.com/DNLHC/glance.nvim / https://github.com/rmagatti/goto-preview (reference preview not working) / https://nvimdev.github.io/

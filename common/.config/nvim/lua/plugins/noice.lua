@@ -27,9 +27,8 @@ return {
 			lsp_doc_border = true, -- add a border to hover docs and signature help
 		},
 		messages = {
-			-- show messages in bottom "messages" window
 			enabled = true,
-			view = "messages",
+			view = "notify",
 		},
 		popupmenu = {
 			-- completion menu inside cmdline
@@ -39,6 +38,16 @@ return {
 		notify = {
 			-- use snacks.notify
 			enabled = false,
+		},
+		routes = {
+			{
+				-- long notifications at bottom
+				filter = {
+					event = "msg_show",
+					min_height = 5,
+				},
+				view = "messages",
+			},
 		},
 	},
 	dependencies = {
