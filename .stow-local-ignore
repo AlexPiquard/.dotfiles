@@ -22,4 +22,5 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
-brew-packages.txt
+packages.txt
+stow.sh

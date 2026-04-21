@@ -146,12 +146,6 @@ use **B** instead of **}**
 
 - fix markdown paragraphs
 - something detecting malicious/dangerous code when opening project (eval, etc)
-- auto close unused buffers
-- https://github.com/Wansmer/treesj
-- https://github.com/rareitems/printer.nvim
-- https://github.com/anuvyklack/windows.nvim
-- opencode diff view when asking permission (due to asking for edit, no one does this)
-- https://github.com/tpope/vim-commentary to comment a part of line
-- tags navigation
+- tags navigation (aerial)
 - something in tmux to load a predefined setup in a tab (multiple windows and cmd in each)
 - https://github.com/DNLHC/glance.nvim / https://github.com/rmagatti/goto-preview (reference preview not working) / https://nvimdev.github.io/

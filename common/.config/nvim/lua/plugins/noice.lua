@@ -44,7 +44,7 @@ return {
 				-- long notifications at bottom
 				filter = {
 					event = "msg_show",
-					min_height = 5,
+					min_height = 10,
 				},
 				view = "messages",
 			},
