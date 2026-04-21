@@ -70,11 +70,13 @@ local delim = is_windows and ";" or ":"
 vim.env.PATH = table.concat({ vim.fn.stdpath("data"), "mason", "bin" }, sep) .. delim .. vim.env.PATH
 
 -- folds, none by default
-vim.opt.foldmethod = "expr"
-vim.opt.foldlevelstart = 99
+opt.foldmethod = "expr"
+opt.foldlevelstart = 99
 
 -- overridden by guess-indent.nvim
 -- vim.cmd('set noexpandtab tabstop=2 shiftwidth=0 softtabstop=0 smarttab')
 
 -- which elements are saved across sessions
-vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
+o.switchbuf = "usetab,useopen"

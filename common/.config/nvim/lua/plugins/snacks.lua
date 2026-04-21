@@ -21,8 +21,33 @@ return {
 		picker = {
 			enabled = true,
 			exclude = { "bin" },
-			sources = { files = { hidden = true }, grep = { hidden = true }, todo_comments = { hidden = true } },
+			sources = {
+				files = { hidden = true },
+				grep = { hidden = true },
+				todo_comments = { hidden = true },
+			},
 			matcher = { smartcase = false },
+			win = {
+				input = {
+					keys = {
+						["<C-w>"] = { { "pick_win", "jump" }, mode = { "i", "n" } },
+						["<CR>"] = { "smart_jump", mode = { "n", "i" } },
+					},
+				},
+			},
+			actions = {
+				smart_jump = function(picker, item)
+					if not item or not item.file then
+						return
+					end
+
+					picker:close()
+
+					vim.schedule(function()
+						vim.cmd("drop " .. vim.fn.fnameescape(item.file))
+					end)
+				end,
+			},
 		},
 		statuscolumn = { enabled = true },
 		-- just indent visual guides
@@ -145,6 +170,19 @@ return {
 			end,
 			desc = "Buffer Diagnostics",
 		},
-		{ "<leader>sH", function() Snacks.picker.highlights() end, desc = "Highlights" },
+		{
+			"<leader>sH",
+			function()
+				Snacks.picker.highlights()
+			end,
+			desc = "Highlights",
+		},
+		{
+			"<leader>sj",
+			function()
+				Snacks.picker.jumps()
+			end,
+			desc = "Jumps",
+		},
 	},
 }
