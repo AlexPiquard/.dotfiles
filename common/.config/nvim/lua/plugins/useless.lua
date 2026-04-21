@@ -7,7 +7,9 @@ return {
 		"aikhe/wrapped.nvim",
 		dependencies = { "nvzone/volt" },
 		cmd = { "WrappedNvim" },
-		opts = {},
+		opts = {
+			path = os.getenv("HOME") .. "/.dotfiles/"
+		},
 	},
 	{
 		"stevearc/aerial.nvim",
