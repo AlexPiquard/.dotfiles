@@ -70,6 +70,7 @@ return {
 			"<leader>,",
 			function()
 				Snacks.picker.buffers({
+					unloaded = false,
 					win = {
 						input = {
 							keys = {
