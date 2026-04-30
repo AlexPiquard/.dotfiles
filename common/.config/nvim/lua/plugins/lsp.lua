@@ -75,14 +75,7 @@ return {
 			"jdtls",
 			"biome",
 			"gopls",
-			"rust_analyzer",
 			"bashls",
-		},
-		automatic_enable = {
-			exclude = {
-				-- enabled and handled by rustaceanvim
-				"rust_analyzer",
-			},
 		},
 	},
 	dependencies = {
