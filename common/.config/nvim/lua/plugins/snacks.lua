@@ -27,26 +27,16 @@ return {
 				todo_comments = { hidden = true },
 			},
 			matcher = { smartcase = false },
+			jump = {
+				reuse_win = true,
+			},
 			win = {
 				input = {
 					keys = {
+						-- S-CR cant be made, so we define another keymap
 						["<C-w>"] = { { "pick_win", "jump" }, mode = { "i", "n" } },
-						["<CR>"] = { "smart_jump", mode = { "n", "i" } },
 					},
 				},
-			},
-			actions = {
-				smart_jump = function(picker, item)
-					if not item or not item.file then
-						return
-					end
-
-					picker:close()
-
-					vim.schedule(function()
-						vim.cmd("drop " .. vim.fn.fnameescape(item.file))
-					end)
-				end,
 			},
 		},
 		statuscolumn = { enabled = true },
