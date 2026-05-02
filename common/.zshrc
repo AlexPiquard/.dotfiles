@@ -1,5 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
+export DISABLE_AUTO_UPDATE="true"
+
 # Uncomment the following line if pasting URLs and other text is messed up.
 DISABLE_MAGIC_FUNCTIONS="true"
 
@@ -7,6 +9,9 @@ DISABLE_MAGIC_FUNCTIONS="true"
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# oh my zsh
+source $HOME/oh-my-zsh.zsh
 
 export PATH="$PATH:$HOME/.local/bin"
 
@@ -46,9 +51,6 @@ eval "$(zoxide init zsh)"
 
 # tirith
 [[ ! -f /home/linuxbrew/.linuxbrew/bin/tirith ]] || eval "$(tirith init)"
-
-# oh my zsh
-source $HOME/oh-my-zsh.zsh
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"

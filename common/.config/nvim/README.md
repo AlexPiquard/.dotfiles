@@ -149,7 +149,6 @@ use **B** instead of **}**
 - tags navigation (aerial)
 - something in tmux to load a predefined setup in a tab (multiple windows and cmd in each)
 - https://github.com/DNLHC/glance.nvim / https://github.com/rmagatti/goto-preview (reference preview not working) / https://nvimdev.github.io/
-- zsh and tmux are slow to start
 - adapt the openlinkhub script to switch profile with qmk keyboard
 - speed up blink in rust
 - rustowl ?

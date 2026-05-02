@@ -1,8 +1,19 @@
-# tmux
-if [ -n "$HYPRLAND_INSTANCE_SIGNATURE" ]; then
-  ZSH_TMUX_AUTOSTART=false
-else
-  ZSH_TMUX_AUTOSTART=true
+export ZSH_DISABLE_COMPFIX="true"
+export ZSH_COMPDUMP="$HOME/.zcompdump"
+
+# check compinit cached file only once a day
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
+
+if [ -z "$HYPRLAND_INSTANCE_SIGNATURE" ] && [ -z "$TMUX" ] && [ -z "$SSH_TTY" ]; then
+  if tmux has-session 2>/dev/null; then
+    exec tmux attach
+  else
+    exec tmux new-session
+  fi
 fi
 
 [[ ! -f $ZSH/oh-my-zsh.sh ]] || source $ZSH/oh-my-zsh.sh
@@ -10,13 +21,10 @@ fi
 brew_dir="/home/linuxbrew/.linuxbrew/share"
 root_dir="/usr/share/zsh/plugins"
 
-# Activate ZSH plugins installed with brew
-[[ ! -f $brew_dir/zsh-autosuggestions/zsh-autosuggestions.zsh ]] || source $brew_dir/zsh-autosuggestions/zsh-autosuggestions.zsh
-[[ ! -f $brew_dir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] || source $brew_dir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+load_plugin() {
+  [[ -f "$brew_dir/$1" ]] && source "$brew_dir/$1"
+  [[ -f "$root_dir/$1" ]] && source "$root_dir/$1"
+}
 
-# Activate ZSH plugins installed at root
-[[ ! -f $root_dir/zsh-autosuggestions/zsh-autosuggestions.zsh ]] || source $root_dir/zsh-autosuggestions/zsh-autosuggestions.zsh
-[[ ! -f $root_dir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] || source $root_dir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Activate default ZSH plugins
-[[ ! -f $HOME/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh ]] || source $HOME/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh
+load_plugin zsh-autosuggestions/zsh-autosuggestions.zsh
+load_plugin zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
