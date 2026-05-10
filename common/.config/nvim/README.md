@@ -153,4 +153,3 @@ use **B** instead of **}**
 - speed up blink in rust
 - rustowl ?
 - make gd opens the already visible buffer (even in other tab) (not working for tabs)
-- invisible comments in markdown

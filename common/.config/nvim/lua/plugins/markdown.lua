@@ -26,6 +26,11 @@ return {
 					opencode_output = { anti_conceal = { enabled = false } },
 				},
 			},
+			html = {
+				comment = {
+					conceal = false,
+				},
+			},
 		},
 	},
 }
