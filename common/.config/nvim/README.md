@@ -152,4 +152,5 @@ use **B** instead of **}**
 - adapt the openlinkhub script to switch profile with qmk keyboard
 - speed up blink in rust
 - rustowl ?
-- make gd opens the already visible buffer (even in other tab)
+- make gd opens the already visible buffer (even in other tab) (not working for tabs)
+- invisible comments in markdown

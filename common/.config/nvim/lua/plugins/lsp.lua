@@ -40,8 +40,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 
 		-- "go to references" is mapped in snacks.picker
-		map("n", "gD", vim.lsp.buf.declaration, opts("Go to declaration"))
-		map("n", "gd", vim.lsp.buf.definition, opts("Go to definition"))
 		map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts("See available code actions"))
 
 		map("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, opts("Add workspace folder"))
@@ -82,6 +80,7 @@ return {
 			"biome",
 			"gopls",
 			"bashls",
+			"mesonlsp",
 		},
 	},
 	dependencies = {

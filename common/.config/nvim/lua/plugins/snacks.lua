@@ -16,6 +16,7 @@ return {
 		notifier = {
 			enabled = true,
 			timeout = 5000,
+			margin = { top = 1, right = 1, bottom = 0 },
 		},
 		notify = { enabled = true },
 		picker = {
@@ -131,6 +132,20 @@ return {
 				Snacks.picker.lsp_references()
 			end,
 			desc = "Lsp references",
+		},
+		{
+			"gd",
+			function()
+				Snacks.picker.lsp_definitions()
+			end,
+			desc = "Goto Definition",
+		},
+		{
+			"gD",
+			function()
+				Snacks.picker.lsp_declarations()
+			end,
+			desc = "Goto Declaration",
 		},
 		{
 			"<leader>ft",
