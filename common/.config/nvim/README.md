@@ -57,41 +57,42 @@ To edit the default lsp config provided by lspconfig, create a file at `.config/
 | insert at beginning        | I        |
 
 
-| plugin action               | keymap     |
-|-----------------------------|------------|
-| next/previous error         | alt b/B    |
-| open context menu           | ctrl p     |
-| toggle table mode in readme | <leader>tm |
-| todos picker                | <leader>st |
-| files picker                | <leader>ff |
-| previous picker             | <leader>fr |
-| grep picker                 | <leader>fw |
-| buffers picker              | <leader>,  |
-| diagnostics picker          | <leader>sd |
-| diagnostics in buffer       | <leader>sD |
-| buffer structure            | <leader>ft |
-| references picker           | gr         |
+| plugin action               | keymap      |
+|-----------------------------|-------------|
+| next/previous error         | alt b/B     |
+| open context menu           | ctrl p      |
+| toggle table mode in readme | <leader>tm  |
+| todos picker                | <leader>st  |
+| files picker                | <leader>ff  |
+| previous picker             | <leader>fr  |
+| grep picker                 | <leader>fw  |
+| buffers picker              | <leader>,   |
+| diagnostics picker          | <leader>sd  |
+| diagnostics in buffer       | <leader>sD  |
+| buffer structure            | <leader>ft  |
+| references picker           | gr          |
 | goto definition             | gd
-| go to type definition       | <leader>T  |
-| search and replace          | <leader>sr |
-| rename variable             | grn        |
-| add workspace folder (lsp)  | <leader>wa |
-| remove workspace folder     | <leader>wa |
-| list code actions           | <leader>ca |
-| list sessions               | <leader>ws |
-| delete session              | <leader>wd |
-| lazygit                     | <leader>lg |
-| git log file                | <leader>gf |
-| git log                     | <leader>gl |
-| git log line                | <leader>gL |
-| git diff                    | <leader>gd |
-| git reset hunk              | <leader>hr |
-| git reset buffer            | <leader>hR |
-| git preview hunk            | <leader>hp |
-| git blame                   | <leader>hb |
-| bookmarks (arrow)           | q          |
-| buffer bookmarks (arrow)    | m          |
-| debugger                    | <leader>d  |
+| go to type definition       | <leader>T   |
+| search and replace          | <leader>sr  |
+| rename variable             | grn         |
+| add workspace folder (lsp)  | <leader>wa  |
+| remove workspace folder     | <leader>wa  |
+| list code actions           | <leader>ca  |
+| list sessions               | <leader>ws  |
+| delete session              | <leader>wd  |
+| lazygit                     | <leader>lg  |
+| git log file                | <leader>gf  |
+| git log                     | <leader>gl  |
+| git log line                | <leader>gL  |
+| git diff                    | <leader>gd  |
+| git reset hunk              | <leader>hr  |
+| git reset buffer            | <leader>hR  |
+| git preview hunk            | <leader>hp  |
+| git blame                   | <leader>hb  |
+| bookmarks (arrow)           | q           |
+| buffer bookmarks (arrow)    | m           |
+| debugger                    | <leader>d   |
+| move selection              | alt h/j/k/l |
 
 
 ## surround/delimiters
