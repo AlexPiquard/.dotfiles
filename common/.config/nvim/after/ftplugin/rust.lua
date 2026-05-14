@@ -1,7 +1,0 @@
-local bufnr = vim.api.nvim_get_current_buf()
-vim.keymap.set("n", "<C-w>e", function()
-	vim.cmd.RustLsp("explainError")
-end, { silent = true, desc = "Explain rust diagnostics", buffer = bufnr })
-vim.keymap.set("n", "<C-w>z", function()
-	vim.cmd.RustLsp("renderDiagnostic")
-end, { silent = true, desc = "Render rust diagnotics", buffer = bufnr })

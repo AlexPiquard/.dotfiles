@@ -77,6 +77,9 @@ return {
 		sources = {
 			default = { "lazydev", "lsp", "snippets", "buffer", "path", "ripgrep" },
 			providers = {
+				lsp = {
+					async = true,
+				},
 				lazydev = {
 					name = "LazyDev",
 					module = "lazydev.integrations.blink",
@@ -108,7 +111,7 @@ return {
 		},
 
 		completion = {
-			keyword = { range = "full" },
+			keyword = { range = "prefix" },
 			ghost_text = { enabled = false },
 			documentation = {
 				auto_show = true,
@@ -120,7 +123,7 @@ return {
 			list = {
 				selection = {
 					preselect = true,
-					auto_insert = true,
+					auto_insert = false,
 				},
 			},
 

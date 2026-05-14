@@ -59,6 +59,23 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
+vim.api.nvim_create_autocmd("VimEnter", {
+	pattern = "*",
+	callback = function()
+		local registry = require("mason-registry")
+
+		-- ensure_installed for non-lsp mason things
+		for _, pkg_name in ipairs({ "codelldb" }) do
+			local ok, pkg = pcall(registry.get_package, pkg_name)
+			if ok then
+				if not pkg:is_installed() then
+					pkg:install()
+				end
+			end
+		end
+	end,
+})
+
 -- nvim-lspconfig is a list of configs to use lsp servers
 -- mason is used to install lsp servers
 -- mason-lspconfig is linking the two and enabling all installed servers
@@ -81,8 +98,10 @@ return {
 			"gopls",
 			"bashls",
 			"mesonlsp",
+			"bacon_ls",
 		},
 	},
+
 	dependencies = {
 		{
 			"mason-org/mason.nvim",
