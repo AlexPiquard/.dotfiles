@@ -11,7 +11,12 @@ o.laststatus = 3
 o.showmode = false
 
 -- Use system clipboard for yank/paste
-o.clipboard = "unnamed"
+o.clipboard = "unnamedplus"
+if vim.env.TMUX then
+    g.clipboard = "tmux"
+else
+    g.clipboard = "osc52"
+end
 -- Highlight current line
 o.cursorline = true
 -- Only show line number on current line when cursorline is on
