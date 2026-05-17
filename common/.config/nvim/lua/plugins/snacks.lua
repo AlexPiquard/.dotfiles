@@ -18,7 +18,6 @@ return {
 			timeout = 5000,
 			margin = { top = 1, right = 1, bottom = 0 },
 		},
-		notify = { enabled = true },
 		picker = {
 			enabled = true,
 			exclude = { "bin" },
