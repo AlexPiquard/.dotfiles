@@ -109,4 +109,42 @@ return {
 			{ "<C-p>", "<cmd>CccPick<cr>", desc = "Open Color Picker" },
 		},
 	},
+	{
+		"neovim/nvim-lspconfig",
+		optional = true,
+		opts = {
+			servers = {
+				html = true,
+				cssls = true,
+				ts_ls = true,
+				marksman = true,
+				tailwindcss = true,
+				biome = true,
+			},
+		},
+	},
+	{
+		"mason-org/mason.nvim",
+		optional = true,
+		opts = {
+			ensure_installed = {
+				["html-lsp"] = {
+					executable_cond = "npm",
+				},
+				["css-lsp"] = {
+					executable_cond = "npm",
+				},
+				["typescript-language-server"] = {
+					executable_cond = "npm",
+				},
+				["marksman"] = true,
+				["tailwindcss-language-server"] = {
+					executable_cond = "npm",
+				},
+				["biome"] = {
+					executable_cond = "npm",
+				},
+			},
+		},
+	},
 }

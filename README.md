@@ -4,7 +4,7 @@
 - install 1password
 - zsh
     - install
-    - `chsh -s $(which zsh)`
+    - `chsh -s $(which zsh)` (or `sudo chsh $USER` in fedora)
     - `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" `
 - install packages
     - using brew:
@@ -14,6 +14,10 @@
         - `sudo pacman -S - < packages.txt`
 - install fonts (`Rec Mono Duotone` and `Symbols Nerd Font Mono`)
 - symlink dotfiles: `./stow.sh`
+- for mason in nvim :
+    - npm : `mise use --global node@latest`
+    - go
+    - cargo
 - tmux
     - install
     - `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`

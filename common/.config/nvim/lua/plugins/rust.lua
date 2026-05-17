@@ -95,4 +95,26 @@ return {
 			},
 		},
 	},
+	{
+		"neovim/nvim-lspconfig",
+		optional = true,
+		opts = {
+			servers = {
+				bacon_ls = true,
+				mesonlsp = true,
+			},
+		},
+	},
+	{
+		"mason-org/mason.nvim",
+		optional = true,
+		opts = {
+			ensure_installed = {
+				bacon = {
+					executable_cond = "cargo",
+				},
+				mesonlsp = true,
+			},
+		},
+	},
 }

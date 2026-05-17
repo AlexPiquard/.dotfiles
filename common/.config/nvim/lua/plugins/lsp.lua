@@ -59,69 +59,73 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
-vim.api.nvim_create_autocmd("VimEnter", {
-	pattern = "*",
-	callback = function()
-		local registry = require("mason-registry")
-
-		-- ensure_installed for non-lsp mason things
-		for _, pkg_name in ipairs({ "codelldb" }) do
-			local ok, pkg = pcall(registry.get_package, pkg_name)
-			if ok then
-				if not pkg:is_installed() then
-					pkg:install()
-				end
-			end
-		end
-	end,
-})
-
 -- nvim-lspconfig is a list of configs to use lsp servers
 -- mason is used to install lsp servers
--- mason-lspconfig is linking the two and enabling all installed servers
 return {
-	"mason-org/mason-lspconfig.nvim",
-	event = "BufReadPre",
-	opts = {
-		-- add languages here
-		ensure_installed = {
-			"lua_ls",
-			"html",
-			"cssls",
-			"clangd",
-			"ts_ls",
-			"pylsp",
-			"marksman",
-			"tailwindcss",
-			"jdtls",
-			"biome",
-			"gopls",
-			"bashls",
-			"mesonlsp",
-			"bacon_ls",
-		},
-	},
+	{
+		"mason-org/mason.nvim",
+		event = "BufReadPre",
+		cmd = { "Mason", "MasonInstall", "MasonUpdate" },
+		opts = {
+			-- PATH = "skip",
 
-	dependencies = {
-		{
-			"mason-org/mason.nvim",
-			cmd = { "Mason", "MasonInstall", "MasonUpdate" },
-			opts = {
-				PATH = "skip",
-
-				ui = {
-					icons = {
-						package_pending = " ",
-						package_installed = " ",
-						package_uninstalled = " ",
-					},
+			ui = {
+				icons = {
+					package_pending = " ",
+					package_installed = " ",
+					package_uninstalled = " ",
 				},
+			},
 
-				max_concurrent_installers = 10,
+			max_concurrent_installers = 10,
+
+			ensure_installed = {
+				stylua = true,
+				["lua-language-server"] = true,
 			},
 		},
-		{
-			"neovim/nvim-lspconfig",
+		---@param opts MasonSettings | {ensure_installed: table<string, boolean|{executable_cond: string}>}
+		config = function(_, opts)
+			require("mason").setup(opts)
+			local mr = require("mason-registry")
+
+			mr.refresh(function()
+				for pkg, config in pairs(opts.ensure_installed) do
+					if
+						config
+						and (
+							type(config) ~= "table"
+							or (config.executable_cond and vim.fn.executable(config.executable_cond) == 1)
+						)
+					then
+						local p = mr.get_package(pkg)
+						if not p:is_installed() then
+							p:install()
+						end
+					end
+				end
+			end)
+		end,
+	},
+	{
+		"neovim/nvim-lspconfig",
+		event = "BufReadPre",
+		opts = {
+			servers = {
+				stylua = true,
+				lua_ls = true,
+			},
 		},
+		config = function(_, opts)
+			for server, config in pairs(opts.servers) do
+				if config then
+					if config == true then
+						config = {}
+					end
+					vim.lsp.config(server, config)
+					vim.lsp.enable(server)
+				end
+			end
+		end,
 	},
 }
