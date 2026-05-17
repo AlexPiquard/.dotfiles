@@ -14,9 +14,6 @@ return {
 			enabled = true,
 			win = {
 				keys = {
-					close_h = { "<A-h>", "hide", desc = "Hide terminal", expr = true, mode = "t" },
-					close_v = { "<A-v>", "hide", desc = "Hide terminal", expr = true, mode = "t" },
-					close_i = { "<A-i>", "hide", desc = "Hide terminal", expr = true, mode = "t" },
 					nav_h = { "<C-h>", term_nav("h"), desc = "Go to Left Window", expr = true, mode = "t" },
 					nav_j = { "<C-j>", term_nav("j"), desc = "Go to Lower Window", expr = true, mode = "t" },
 					nav_k = { "<C-k>", term_nav("k"), desc = "Go to Upper Window", expr = true, mode = "t" },
@@ -27,13 +24,13 @@ return {
 	},
 	keys = {
 		{
-			"<A-h>",
+			"<leader>j",
 			function()
 				Snacks.terminal(nil, { count = 1, shell = "zsh", interactive = true, win = { wo = { winbar = "" } } })
 			end,
 		},
 		{
-			"<A-v>",
+			"<leader>l",
 			function()
 				Snacks.terminal(
 					nil,
@@ -42,7 +39,7 @@ return {
 			end,
 		},
 		{
-			"<A-i>",
+			"<leader>i",
 			function()
 				Snacks.terminal(nil, { count = 3, shell = "zsh", interactive = true, win = { position = "float" } })
 			end,
