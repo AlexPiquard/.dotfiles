@@ -25,6 +25,8 @@ return {
 				end,
 				default_settings = {
 					-- rust-analyzer language server configuration
+					-- install it with "rustup component add rust-analyzer"
+
 					["rust-analyzer"] = {
 						cargo = {
 							allFeatures = true,
@@ -70,12 +72,6 @@ return {
 				adapter = require("rustaceanvim.config").get_codelldb_adapter(codelldb, library_path),
 			}
 			vim.g.rustaceanvim = vim.tbl_deep_extend("keep", vim.g.rustaceanvim or {}, opts or {})
-			if vim.fn.executable("rust-analyzer") == 0 then
-				Snacks.notifier(
-					"**rust-analyzer** not found in PATH, please install it.\nhttps://rust-analyzer.github.io/",
-					"error"
-				)
-			end
 		end,
 	},
 	{

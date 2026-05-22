@@ -1,3 +1,17 @@
+local function mise_java_bin(version)
+	if vim.fn.executable("mise") == 1 then
+		local handle = io.popen("mise where java@" .. version .. " 2>/dev/null")
+		if handle then
+			local path = handle:read("*a"):gsub("%s+", "")
+			handle:close()
+			if path ~= "" then
+				return path .. "/bin/java"
+			end
+		end
+	end
+	return nil
+end
+
 return {
 	{
 		"mfussenegger/nvim-jdtls",
@@ -6,40 +20,39 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		optional = true,
-		opts = function(_, opts)
-			-- Change used jdtls command to use java 21
-			local jdtlsCmd = {
-				"jdtls",
-				-- "-configuration",
-				-- os.getenv("HOME") .. "/.cache/jdtls/config",
-				-- "-data",
-				-- os.getenv("HOME") .. "/.cache/jdtls/workspace",
-				"--java-executable",
-				vim.env.HOME .. "/.local/share/mise/installs/java/21.0.2/bin/java",
-				-- TODO: auto install ? check version ?
-			}
+		opts = function(_, _)
+			local jdk_latest = mise_java_bin("latest") or vim.fn.executable("java") == 1 and "java" or nil
+			local jdk_17 = mise_java_bin("17")
 
-			return {
+			if not jdk_latest then
+				vim.notify("jdtls: no Java found via mise or PATH", vim.log.levels.WARN)
+				return {}
+			end
+
+			local jdtlsCmd = { "jdtls", "--java-executable", jdk_latest }
+
+			local config = {
 				servers = {
 					jdtls = {
-						-- for lombok, add in .zshrc
-						-- export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/nvim/mason/packages/jdtls/lombok.jar"
 						cmd = jdtlsCmd,
-						settings = {
-							java = {
-								configuration = {
-									runtimes = {
-										{
-											name = "JavaSE-17",
-											path = vim.env.HOME .. "/.local/share/mise/installs/java/17.0.2/bin/java",
-										},
-									},
-								},
-							},
-						},
+						settings = {},
 					},
 				},
 			}
+
+			if jdk_17 then
+				config.servers.jdtls.settings = {
+					java = {
+						configuration = {
+							runtimes = {
+								{ name = "JavaSE-17", path = jdk_17 },
+							},
+						},
+					},
+				}
+			end
+
+			return config
 		end,
 	},
 	{
