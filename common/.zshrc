@@ -41,10 +41,29 @@ export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/nvim/mason/packages/jdtls/l
 # direnv
 eval "$(direnv export zsh)"
 
-#starship
+# starship
 eval "$(starship init zsh)"
 
+# fzf
 source <(fzf --zsh)
+
+update_fzf_theme() {
+  if [ -f "$HOME/.config/fzf/theme.sh" ]; then
+    source "$HOME/.config/fzf/theme.sh"
+  fi
+}
+## fzf: apply theme when using "fzf" command
+fzf() {
+    update_fzf_theme
+    command fzf "$@"
+}
+## fzf: apply theme when using Ctrl+R
+fzf-history-wrapper() {
+  update_fzf_theme
+  zle fzf-history-widget
+}
+zle -N fzf-history-wrapper
+bindkey '^R' fzf-history-wrapper
 
 # zoxide
 eval "$(zoxide init zsh)"

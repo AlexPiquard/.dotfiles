@@ -24,3 +24,6 @@ kill -SIGUSR1 $(pgrep kitty)
 # alacritty
 $UPDATE_SCRIPT "$theme" "alacritty/%s.toml"
 touch --no-dereference ~/.config/alacritty/alacritty.toml
+
+# fzf
+$UPDATE_SCRIPT "$theme" "fzf/%s.sh"
