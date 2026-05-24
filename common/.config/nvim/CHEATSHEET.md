@@ -1,9 +1,3 @@
-# help
-
-To add a language, just add it to the `ensure_installed` list in `lsp.lua`, and in `treesitter.lua` for the colors.
-
-To edit the default lsp config provided by lspconfig, create a file at `.config/nvim/after/lsp/[name].lsp`
-
 # vim
 
 
@@ -155,3 +149,4 @@ use **B** instead of **}**
 - rustowl ?
 - make gd opens the already visible buffer (even in other tab) (not working for tabs)
 - symlinked subfolders with stow
+- todo-comments errors without the ending ":"
