@@ -9,7 +9,7 @@
 - install packages
     - using brew:
         - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-        - `brew install $(cat packages.txt)`
+        - `./brew/install.sh`
     - using pacman:
         - `sudo pacman -S - < packages.txt`
 - install fonts (`Rec Mono Duotone` and `Symbols Nerd Font Mono`)

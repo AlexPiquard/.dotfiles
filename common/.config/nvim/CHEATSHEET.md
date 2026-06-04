@@ -150,3 +150,4 @@ use **B** instead of **}**
 - make gd opens the already visible buffer (even in other tab) (not working for tabs)
 - symlinked subfolders with stow
 - todo-comments errors without the ending ":"
+- https://github.com/numToStr/Comment.nvim
