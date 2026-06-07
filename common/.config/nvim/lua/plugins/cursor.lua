@@ -2,11 +2,13 @@ return {
 	{
 		-- show and work with multiple cursors
 		"mg979/vim-visual-multi",
-		event = "BufReadPost",
+		event = "VeryLazy",
+		enabled = false,
 		init = function()
 			vim.g.VM_maps = {
-				["Find Under"] = "<C-y>",
-				["Find Subword Under"] = "<C-y>",
+                -- TODO: find other keymap, this one is used
+				-- ["Find Under"] = "<C-y>",
+				-- ["Find Subword Under"] = "<C-y>",
 			}
 		end,
 	},
@@ -43,6 +45,7 @@ return {
 	{
 		-- Change the w, e, b motions. Move by subwords and skip insignificant punctuation.
 		"chrisgrieser/nvim-spider",
+        enabled = false,
 		keys = {
 			{ "w", "<cmd>lua require('spider').motion('w')<CR>", mode = { "n", "o", "x" } },
 			{ "e", "<cmd>lua require('spider').motion('e')<CR>", mode = { "n", "o", "x" } },
@@ -62,6 +65,7 @@ return {
 					enabled = false,
 				},
 				char = {
+                    enabled = false,
 					jump_labels = false,
 				},
 			},

@@ -12,6 +12,22 @@ map("n", "<C-l>", "<C-w>l", { desc = "switch window right" })
 map("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
 map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
 
+-- center after move
+map("n", "<C-d>", function()
+	vim.cmd([[execute "normal! \<C-d>"]])
+	vim.cmd("normal! zz")
+end)
+map("n", "<C-u>", "<C-u>zz")
+
+map("n", "n", function()
+	vim.cmd([[execute "normal! n"]])
+	vim.cmd("normal! zzzv")
+end)
+map("n", "N", function()
+	vim.cmd([[execute "normal! N"]])
+	vim.cmd("normal! zzzv")
+end)
+
 vim.keymap.set("n", "<Esc>", function()
 	-- clear "f" and "t" search of flash if active
 	local char = require("flash.plugins.char")
