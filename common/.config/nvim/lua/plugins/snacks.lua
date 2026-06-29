@@ -201,5 +201,31 @@ return {
 			end,
 			desc = "Jumps",
 		},
+		{
+			"<leader>bd",
+			function()
+				Snacks.bufdelete()
+			end,
+			desc = "Delete buffer",
+		},
+		{
+			"<leader>bD",
+			"<cmd>:bd<cr>",
+			desc = "Delete buffer and window",
+		},
+		{
+			"<leader>bo",
+			function()
+				Snacks.bufdelete.other()
+			end,
+			desc = "Delete other buffers",
+		},
+		{
+			"<leader>bi",
+			function()
+				Snacks.bufdelete.invisible()
+			end,
+			desc = "Delete invisible buffers",
+		},
 	},
 }
