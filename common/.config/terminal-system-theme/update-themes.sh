@@ -14,9 +14,6 @@ tmux source ~/.config/tmux/theme.tmux
 # lazygit
 $UPDATE_SCRIPT "$theme" "lazygit/%s.yml"
 
-# opencode
-$UPDATE_SCRIPT "$theme" "opencode/themes/%s.json"
-
 # kitty
 $UPDATE_SCRIPT "$theme" "kitty/%s.conf"
 kill -SIGUSR1 $(pgrep kitty)

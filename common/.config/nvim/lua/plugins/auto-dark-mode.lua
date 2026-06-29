@@ -6,8 +6,9 @@ return {
 	"f-person/auto-dark-mode.nvim",
 	lazy = false,
 	priority = 999,
-	cond = function ()
-		local cmd = "dbus-send --session --print-reply=literal --reply-timeout=1000 --dest=org.freedesktop.portal.Desktop /org/freedesktop/portal/desktop org.freedesktop.portal.Settings.Read string:org.freedesktop.appearance string:color-scheme"
+	cond = function()
+		local cmd =
+			"dbus-send --session --print-reply=literal --reply-timeout=1000 --dest=org.freedesktop.portal.Desktop /org/freedesktop/portal/desktop org.freedesktop.portal.Settings.Read string:org.freedesktop.appearance string:color-scheme"
 
 		local result = vim.fn.system(cmd)
 		return result:match("uint32%s+1") or result:match("uint32%s+[02]")

@@ -21,6 +21,11 @@ return {
 					wrap = true,
 				},
 			},
+			output = {
+				tools = {
+					use_folds = false,
+				},
+			},
 		},
 	},
 	keys = {

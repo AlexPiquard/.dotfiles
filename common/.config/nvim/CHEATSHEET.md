@@ -151,3 +151,4 @@ use **B** instead of **}**
 - symlinked subfolders with stow
 - todo-comments errors without the ending ":"
 - https://github.com/numToStr/Comment.nvim
+- https://github.com/Hashino/askai.nvim

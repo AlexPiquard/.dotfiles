@@ -77,208 +77,285 @@
 		"terminal_yellow_bright": "#ffd8ab",
 		"todo": "#82aaff",
 		"warning": "#ffc777",
-		"yellow": "#ffc777"
+		"yellow": "#ffc777",
+		"bg_day": "#e1e2e7",
+		"bg_dark_day": "#d0d5e3",
+		"bg_dark1_day": "#c1c9df",
+		"bg_float_day": "#d0d5e3",
+		"bg_highlight_day": "#c4c8da",
+		"bg_popup_day": "#d0d5e3",
+		"bg_search_day": "#7890dd",
+		"bg_sidebar_day": "#d0d5e3",
+		"bg_statusline_day": "#d0d5e3",
+		"bg_visual_day": "#b7c1e3",
+		"black_day": "#b4b5b9",
+		"blue_day": "#2e7de9",
+		"blue0_day": "#7890dd",
+		"blue1_day": "#188092",
+		"blue2_day": "#07879d",
+		"blue5_day": "#006a83",
+		"blue6_day": "#2e5857",
+		"blue7_day": "#92a6d5",
+		"border_day": "#b4b5b9",
+		"border_highlight_day": "#4094a3",
+		"comment_day": "#848cb5",
+		"cyan_day": "#007197",
+		"dark3_day": "#8990b3",
+		"dark5_day": "#68709a",
+		"diff_add_day": "#b7ced5",
+		"diff_change_day": "#d5d9e4",
+		"diff_delete_day": "#dababe",
+		"diff_text_day": "#92a6d5",
+		"error_day": "#c64343",
+		"fg_day": "#3760bf",
+		"fg_dark_day": "#6172b0",
+		"fg_float_day": "#3760bf",
+		"fg_gutter_day": "#a8aecb",
+		"fg_sidebar_day": "#6172b0",
+		"git_add_day": "#4197a4",
+		"git_change_day": "#506d9c",
+		"git_delete_day": "#c47981",
+		"git_ignore_day": "#8990b3",
+		"green_day": "#587539",
+		"green1_day": "#387068",
+		"green2_day": "#38919f",
+		"hint_day": "#118c74",
+		"info_day": "#07879d",
+		"magenta_day": "#9854f1",
+		"magenta2_day": "#d20065",
+		"orange_day": "#b15c00",
+		"purple_day": "#7847bd",
+		"rainbow_1_day": "#2e7de9",
+		"rainbow_2_day": "#8c6c3e",
+		"rainbow_3_day": "#587539",
+		"rainbow_4_day": "#118c74",
+		"rainbow_5_day": "#9854f1",
+		"rainbow_6_day": "#7847bd",
+		"rainbow_7_day": "#b15c00",
+		"rainbow_8_day": "#f52a65",
+		"red_day": "#f52a65",
+		"red1_day": "#c64343",
+		"teal_day": "#118c74",
+		"terminal_black_day": "#a1a6c5",
+		"terminal_black_bright_day": "#a1a6c5",
+		"terminal_blue_day": "#2e7de9",
+		"terminal_blue_bright_day": "#358aff",
+		"terminal_cyan_day": "#007197",
+		"terminal_cyan_bright_day": "#007ea8",
+		"terminal_green_day": "#587539",
+		"terminal_green_bright_day": "#5c8524",
+		"terminal_magenta_day": "#9854f1",
+		"terminal_magenta_bright_day": "#a463ff",
+		"terminal_red_day": "#f52a65",
+		"terminal_red_bright_day": "#ff4774",
+		"terminal_white_day": "#6172b0",
+		"terminal_white_bright_day": "#3760bf",
+		"terminal_yellow_day": "#8c6c3e",
+		"terminal_yellow_bright_day": "#a27629",
+		"todo_day": "#2e7de9",
+		"warning_day": "#8c6c3e",
+		"yellow_day": "#8c6c3e"
 	},
 	"theme": {
 		"primary": {
 			"dark": "blue",
-			"light": "blue"
+			"light": "blue_day"
 		},
 		"secondary": {
 			"dark": "purple",
-			"light": "purple"
+			"light": "purple_day"
 		},
 		"accent": {
 			"dark": "orange",
-			"light": "orange"
+			"light": "orange_day"
 		},
 		"error": {
 			"dark": "red1",
-			"light": "red1"
+			"light": "red1_day"
 		},
 		"warning": {
 			"dark": "yellow",
-			"light": "yellow"
+			"light": "yellow_day"
 		},
 		"success": {
 			"dark": "green",
-			"light": "green"
+			"light": "green_day"
 		},
 		"info": {
 			"dark": "blue2",
-			"light": "blue2"
+			"light": "blue2_day"
 		},
 		"text": {
 			"dark": "fg",
-			"light": "fg"
+			"light": "fg_day"
 		},
 		"textMuted": {
 			"dark": "fg_dark",
-			"light": "fg_dark"
+			"light": "fg_dark_day"
 		},
 		"background": {
 			"dark": "bg",
-			"light": "bg"
+			"light": "bg_day"
 		},
 		"backgroundPanel": {
 			"dark": "bg_dark",
-			"light": "bg_dark"
+			"light": "bg_dark_day"
 		},
 		"backgroundElement": {
 			"dark": "bg_highlight",
-			"light": "bg_highlight"
+			"light": "bg_highlight_day"
 		},
 		"border": {
 			"dark": "black",
-			"light": "black"
+			"light": "black_day"
 		},
 		"borderActive": {
 			"dark": "border_highlight",
-			"light": "border_highlight"
+			"light": "border_highlight_day"
 		},
 		"borderSubtle": {
 			"dark": "dark3",
-			"light": "dark3"
+			"light": "dark3_day"
 		},
 		"diffAdded": {
 			"dark": "green1",
-			"light": "green1"
+			"light": "green1_day"
 		},
 		"diffRemoved": {
 			"dark": "red1",
-			"light": "red1"
+			"light": "red1_day"
 		},
 		"diffContext": {
 			"dark": "fg_dark",
-			"light": "fg_dark"
+			"light": "fg_dark_day"
 		},
 		"diffHunkHeader": {
 			"dark": "comment",
-			"light": "comment"
+			"light": "comment_day"
 		},
 		"diffHighlightAdded": {
 			"dark": "git_add",
-			"light": "git_add"
+			"light": "git_add_day"
 		},
 		"diffHighlightRemoved": {
 			"dark": "git_delete",
-			"light": "git_delete"
+			"light": "git_delete_day"
 		},
 		"diffAddedBg": {
 			"dark": "diff_add",
-			"light": "diff_add"
+			"light": "diff_add_day"
 		},
 		"diffRemovedBg": {
 			"dark": "diff_delete",
-			"light": "diff_delete"
+			"light": "diff_delete_day"
 		},
 		"diffContextBg": {
 			"dark": "bg_highlight",
-			"light": "bg_highlight"
+			"light": "bg_highlight_day"
 		},
 		"diffLineNumber": {
 			"dark": "fg_gutter",
-			"light": "fg_gutter"
+			"light": "fg_gutter_day"
 		},
 		"diffAddedLineNumberBg": {
 			"dark": "diff_add",
-			"light": "diff_add"
+			"light": "diff_add_day"
 		},
 		"diffRemovedLineNumberBg": {
 			"dark": "diff_delete",
-			"light": "diff_delete"
+			"light": "diff_delete_day"
 		},
 		"markdownText": {
 			"dark": "fg",
-			"light": "fg"
+			"light": "fg_day"
 		},
 		"markdownHeading": {
 			"dark": "blue",
-			"light": "blue"
+			"light": "blue_day"
 		},
 		"markdownLink": {
 			"dark": "blue",
-			"light": "blue"
+			"light": "blue_day"
 		},
 		"markdownLinkText": {
 			"dark": "teal",
-			"light": "teal"
+			"light": "teal_day"
 		},
 		"markdownCode": {
 			"dark": "green",
-			"light": "green"
+			"light": "green_day"
 		},
 		"markdownBlockQuote": {
 			"dark": "comment",
-			"light": "comment"
+			"light": "comment_day"
 		},
 		"markdownEmph": {
 			"dark": "fg",
-			"light": "fg"
+			"light": "fg_day"
 		},
 		"markdownStrong": {
 			"dark": "fg",
-			"light": "fg"
+			"light": "fg_day"
 		},
 		"markdownHorizontalRule": {
 			"dark": "fg_gutter",
-			"light": "fg_gutter"
+			"light": "fg_gutter_day"
 		},
 		"markdownListItem": {
 			"dark": "blue5",
-			"light": "blue5"
+			"light": "blue5_day"
 		},
 		"markdownListEnumeration": {
 			"dark": "orange",
-			"light": "orange"
+			"light": "orange_day"
 		},
 		"markdownImage": {
 			"dark": "blue",
-			"light": "blue"
+			"light": "blue_day"
 		},
 		"markdownImageText": {
 			"dark": "teal",
-			"light": "teal"
+			"light": "teal_day"
 		},
 		"markdownCodeBlock": {
 			"dark": "fg",
-			"light": "fg"
+			"light": "fg_day"
 		},
 		"syntaxComment": {
 			"dark": "comment",
-			"light": "comment"
+			"light": "comment_day"
 		},
 		"syntaxKeyword": {
 			"dark": "purple",
-			"light": "purple"
+			"light": "purple_day"
 		},
 		"syntaxFunction": {
 			"dark": "blue",
-			"light": "blue"
+			"light": "blue_day"
 		},
 		"syntaxVariable": {
 			"dark": "fg",
-			"light": "fg"
+			"light": "fg_day"
 		},
 		"syntaxString": {
 			"dark": "green",
-			"light": "green"
+			"light": "green_day"
 		},
 		"syntaxNumber": {
 			"dark": "orange",
-			"light": "orange"
+			"light": "orange_day"
 		},
 		"syntaxType": {
 			"dark": "blue1",
-			"light": "blue1"
+			"light": "blue1_day"
 		},
 		"syntaxOperator": {
 			"dark": "blue5",
-			"light": "blue5"
+			"light": "blue5_day"
 		},
 		"syntaxPunctuation": {
 			"dark": "fg_dark",
-			"light": "fg_dark"
+			"light": "fg_dark_day"
 		}
 	}
 }
