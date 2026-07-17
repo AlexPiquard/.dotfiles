@@ -23,6 +23,7 @@ return {
 			},
 			output = {
 				tools = {
+					show_reasoning_output = false,
 					use_folds = false,
 				},
 			},

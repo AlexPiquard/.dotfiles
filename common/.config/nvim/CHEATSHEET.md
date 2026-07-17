@@ -144,7 +144,6 @@ use **B** instead of **}**
 - tags navigation (aerial)
 - something in tmux to load a predefined setup in a tab (multiple windows and cmd in each)
 - https://github.com/DNLHC/glance.nvim / https://github.com/rmagatti/goto-preview (reference preview not working) / https://nvimdev.github.io/
-- adapt the openlinkhub script to switch profile with qmk keyboard
 - speed up blink in rust
 - rustowl ?
 - make gd opens the already visible buffer (even in other tab) (not working for tabs)
@@ -152,3 +151,4 @@ use **B** instead of **}**
 - todo-comments errors without the ending ":"
 - https://github.com/numToStr/Comment.nvim
 - https://github.com/Hashino/askai.nvim
+- disable highlight for color words in comments
