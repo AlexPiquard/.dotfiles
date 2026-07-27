@@ -6,7 +6,7 @@ return {
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
 		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.icons" },
-		ft = { "markdown", "opencode_output" },
+		ft = { "markdown" },
 		---@module 'render-markdown'
 		---@type render.md.UserConfig
 		opts = {
@@ -19,12 +19,6 @@ return {
 			},
 			file_types = {
 				"markdown",
-				"opencode_output",
-			},
-			overrides = {
-				filetype = {
-					opencode_output = { anti_conceal = { enabled = false } },
-				},
 			},
 			html = {
 				comment = {

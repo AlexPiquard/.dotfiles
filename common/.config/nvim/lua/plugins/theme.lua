@@ -57,13 +57,6 @@ return {
 		-- 	floats = "transparent",
 		-- },
 		on_highlights = function(hl, c)
-			-- Opencode
-			hl.OpencodeDiffAdd = { bg = c.diff.add }
-			hl.OpencodeDiffDelete = { bg = c.diff.delete }
-			hl.OpencodeDiffGutter = { fg = c.fg_gutter, bg = c.bg_dark1 }
-			hl.OpencodeDiffAddGutter = { fg = c.green, bg = c.bg_dark1 }
-			hl.OpencodeDiffDeleteGutter = { fg = c.red, bg = c.bg_dark1 }
-			hl.OpencodeInputLegend = { fg = c.blue5 }
 			-- Fyler git colors
 			hl.FylerGitModified = { fg = c.git.change }
 			hl.FylerGitUntracked = { fg = c.git.add }

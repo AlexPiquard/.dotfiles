@@ -38,7 +38,7 @@ return {
 		-- no save at all when there is only a dashboard
 		bypass_save_filetypes = { "snacks_dashboard" },
 		-- exclude theses filetypes when saving
-		close_filetypes_on_save = { "checkhealth", "opencode_output" },
+		close_filetypes_on_save = { "checkhealth" },
 		-- dont save hidden buffers
 		pre_save_cmds = { close_hidden_buffers },
 	},
