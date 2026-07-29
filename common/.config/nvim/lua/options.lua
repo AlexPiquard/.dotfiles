@@ -77,6 +77,15 @@ vim.env.PATH = table.concat({ vim.fn.stdpath("data"), "mason", "bin" }, sep) .. 
 -- folds, none by default
 opt.foldmethod = "expr"
 opt.foldlevelstart = 99
+-- no fold in diff mode
+vim.api.nvim_create_autocmd("OptionSet", {
+  pattern = "diff",
+  callback = function()
+    if vim.v.option_new then
+      vim.o.foldenable = false
+    end
+  end,
+})
 
 -- overridden by guess-indent.nvim
 -- vim.cmd('set noexpandtab tabstop=2 shiftwidth=0 softtabstop=0 smarttab')
