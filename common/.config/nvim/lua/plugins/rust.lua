@@ -75,6 +75,25 @@ return {
 		end,
 	},
 	{
+		-- curl -L https://raw.githubusercontent.com/cordx56/rustowl/refs/heads/main/scripts/installer | sh
+		--
+		-- 🟩 green: variable's lifetime
+		--		- definitely live: the variable is provably initialized on every path reaching this point
+		--		- maybe live (wavy): the variable is initialized on some paths but may have been moved, dropped, or be uninitialized on others
+		-- 🟦 blue: immutable borrowing
+		-- 🟪 purple: mutable borrowing
+		-- 🟧 orange: value moved / function call
+		-- 🟥 red: lifetime error
+		--		- Diff of lifetime between actual and expected, or
+		--		- Invalid overlapped lifetime of mutable and shared (immutable) references
+		"cordx56/rustowl",
+		cond = vim.fn.executable("rustowl") == 1,
+		version = "*",
+		ft = "rust",
+		lazy = false,
+		opts = {},
+	},
+	{
 		"Saecki/crates.nvim",
 		event = { "BufRead Cargo.toml" },
 		opts = {

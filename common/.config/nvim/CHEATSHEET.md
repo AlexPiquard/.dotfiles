@@ -145,7 +145,6 @@ use **B** instead of **}**
 - something in tmux to load a predefined setup in a tab (multiple windows and cmd in each)
 - https://github.com/DNLHC/glance.nvim / https://github.com/rmagatti/goto-preview (reference preview not working) / https://nvimdev.github.io/
 - speed up blink in rust
-- rustowl ?
 - make gd opens the already visible buffer (even in other tab) (not working for tabs)
 - symlinked subfolders with stow
 - todo-comments errors without the ending ":"

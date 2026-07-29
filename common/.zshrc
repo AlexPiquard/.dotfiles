@@ -98,7 +98,11 @@ bindkey '^[[3;5~' kill-word
 # rust
 if [[ -f $HOME/.cargo/env ]]; then
   . "$HOME/.cargo/env"
-  export PATH="$HOME/.cargo/bin"
+fi
+
+# rustowl
+if [[ -d $HOME/.rustowl ]]; then
+  export PATH="$PATH:$HOME/.rustowl"
 fi
 
 # gstreamer
