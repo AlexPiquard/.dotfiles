@@ -89,54 +89,6 @@
 | move selection              | alt h/j/k/l |
 
 
-## surround/delimiters
-
-using vim-surround
-
-### add
-
-
-| action              | keymap          |
-|---------------------|-----------------|
-| yank surround (add) | ys<...>         |
-| word                | ys<i/a>**w**<.> |
-| paragraph           | ys<i/a>**p**<.> |
-| line                | yss<.>          |
-
-
-### delete
-
-
-| action                      | keymap |
-|-----------------------------|--------|
-| delete surround             | ds<.>  |
-| delete balanced parenthesis | ds%    |
-
-
-### change
-
-
-| action          | keymap          |
-|-----------------|-----------------|
-| change surround | cs<actual><new> |
-
-
-### visual mode
-
-
-| action   | keymap |
-|----------|--------|
-| Surround | S<.>   |
-
-
-### special notes 
-
-**(** adds a space and not **)**
-
-use **b** instead of **)**
-
-use **B** instead of **}**
-
 # TODO
 
 - fix markdown paragraphs
@@ -151,3 +103,9 @@ use **B** instead of **}**
 - https://github.com/numToStr/Comment.nvim
 - https://github.com/Hashino/askai.nvim
 - disable highlight for color words in comments
+- https://github.com/chrisgrieser/nvim-various-textobjs
+- https://github.com/kosayoda/nvim-lightbulb ? to see available actions
+- https://github.com/rachartier/tiny-code-action.nvim : better way to see actions ? 
+- https://github.com/icholy/lsplinks.nvim (https://github.com/davidosomething/dotfiles/blob/dev/nvim/lua/dko/plugins/lsp.lua)
+- change keymap to accept terminal suggestion (instead of arrow)
+- tobira messages at startup

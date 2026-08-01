@@ -15,6 +15,7 @@ return {
 	},
 	{
 		"kamegoro/tobira.nvim",
+		enabled = false,
 		event = "BufReadPost",
 		opts = {},
 	},

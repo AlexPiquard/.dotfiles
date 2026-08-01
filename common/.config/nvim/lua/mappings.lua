@@ -30,8 +30,8 @@ end)
 
 vim.keymap.set("n", "<Esc>", function()
 	-- clear "f" and "t" search of flash if active
-	local char = require("flash.plugins.char")
-	if char.state then
+	local ok, char = pcall(require, "flash.plugins.char")
+	if ok and char.state then
 		char.state:hide()
 	end
 	-- clear global highlights
