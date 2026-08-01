@@ -108,4 +108,3 @@
 - https://github.com/rachartier/tiny-code-action.nvim : better way to see actions ? 
 - https://github.com/icholy/lsplinks.nvim (https://github.com/davidosomething/dotfiles/blob/dev/nvim/lua/dko/plugins/lsp.lua)
 - change keymap to accept terminal suggestion (instead of arrow)
-- tobira messages at startup
