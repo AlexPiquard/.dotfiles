@@ -93,7 +93,6 @@
 
 - fix markdown paragraphs
 - something detecting malicious/dangerous code when opening project (eval, etc)
-- tags navigation (aerial)
 - something in tmux to load a predefined setup in a tab (multiple windows and cmd in each)
 - https://github.com/DNLHC/glance.nvim / https://github.com/rmagatti/goto-preview (reference preview not working) / https://nvimdev.github.io/
 - speed up blink in rust
