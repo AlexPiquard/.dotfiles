@@ -117,6 +117,7 @@ return {
 			servers = {
 				bacon_ls = true,
 				mesonlsp = true,
+				blueprint_ls = true, -- sudo dnf install blueprint_compiler
 			},
 		},
 	},
