@@ -26,8 +26,18 @@ return {
 	cmd = { "TSInstall", "TSInstallFromGrammar", "TSUpdate", "TSUninstall", "TSLog" },
 	dependencies = {
 		{
+			-- Bundle of more than 30 new text objects for Neovim.
+			"chrisgrieser/nvim-various-textobjs",
+			opts = {
+				keymaps = {
+					useDefaults = true,
+				},
+			},
+		},
+		{
 			"nvim-treesitter/nvim-treesitter-textobjects",
 			branch = "main",
+			enabled = false,
 			init = function()
 				-- Disable entire built-in ftplugin mappings to avoid conflicts.
 				vim.g.no_plugin_maps = true

@@ -100,9 +100,7 @@
 - symlinked subfolders with stow
 - todo-comments errors without the ending ":"
 - https://github.com/numToStr/Comment.nvim
-- https://github.com/Hashino/askai.nvim
 - disable highlight for color words in comments
-- https://github.com/chrisgrieser/nvim-various-textobjs
 - https://github.com/kosayoda/nvim-lightbulb ? to see available actions
 - https://github.com/rachartier/tiny-code-action.nvim : better way to see actions ? 
 - https://github.com/icholy/lsplinks.nvim (https://github.com/davidosomething/dotfiles/blob/dev/nvim/lua/dko/plugins/lsp.lua)
