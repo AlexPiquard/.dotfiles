@@ -1,3 +1,7 @@
+local function set_theme(name)
+	vim.cmd("colorscheme " .. name)
+end
+
 -- theme colors:
 -- bg = "#222436",
 -- bg_dark = "#1e2030",
@@ -36,44 +40,67 @@
 -- },
 
 return {
-	"folke/tokyonight.nvim",
-	lazy = false,
-	priority = 1000,
-	opts = {
-		style = "moon",
-		light_style = "day",
-		styles = {
-			comments = { italic = true },
-			keywords = { italic = true },
-			functions = {},
-			variables = {},
-			sidebars = "dark",
-			floats = "dark",
-		},
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {
+			style = "moon",
+			light_style = "day",
+			styles = {
+				comments = { italic = true },
+				keywords = { italic = true },
+				functions = {},
+				variables = {},
+				sidebars = "dark",
+				floats = "dark",
+			},
 
-		-- transparent = true,
-		-- styles = {
-		-- 	sidebars = "transparent",
-		-- 	floats = "transparent",
-		-- },
-		on_highlights = function(hl, c)
-			-- Fyler git colors
-			hl.FylerGitModified = { fg = c.git.change }
-			hl.FylerGitUntracked = { fg = c.git.add }
-			-- TabLine
-			hl.TabLine = { fg = c.fg_dark, bg = c.bg_statusline }
-			hl.TabLineSel = { fg = c.blue, bg = c.fg_gutter }
-			hl.TabLineFill = { fg = c.fg_sidebar, bg = c.bg }
-			-- Flash
-			hl.FlashLabel = { fg = c.bg, bg = "#d20065" }
+			-- transparent = true,
+			-- styles = {
+			-- 	sidebars = "transparent",
+			-- 	floats = "transparent",
+			-- },
+			on_highlights = function(hl, c)
+				-- Fyler git colors
+				hl.FylerGitModified = { fg = c.git.change }
+				hl.FylerGitUntracked = { fg = c.git.add }
+				-- TabLine
+				hl.TabLine = { fg = c.fg_dark, bg = c.bg_statusline }
+				hl.TabLineSel = { fg = c.blue, bg = c.fg_gutter }
+				hl.TabLineFill = { fg = c.fg_sidebar, bg = c.bg }
+				-- Flash
+				hl.FlashLabel = { fg = c.bg, bg = "#d20065" }
+			end,
+		},
+		config = function(_, opts)
+			require("tokyonight").setup(opts)
+			local auto_dark_mode = require("lazy.core.config").plugins["auto-dark-mode.nvim"]
+			local auto_dark_mode_enabled = auto_dark_mode and auto_dark_mode._.cond
+			if not auto_dark_mode_enabled then
+				vim.cmd("colorscheme tokyonight")
+			end
 		end,
 	},
-	config = function(_, opts)
-		require("tokyonight").setup(opts)
-		local auto_dark_mode = require("lazy.core.config").plugins["auto-dark-mode.nvim"]
-		local auto_dark_mode_enabled = auto_dark_mode and auto_dark_mode._.cond
-		if not auto_dark_mode_enabled then
-			vim.cmd("colorscheme tokyonight")
-		end
-	end,
+	{
+		"f-person/auto-dark-mode.nvim",
+		lazy = false,
+		priority = 999,
+		cond = function()
+			local cmd =
+				"dbus-send --session --print-reply=literal --reply-timeout=1000 --dest=org.freedesktop.portal.Desktop /org/freedesktop/portal/desktop org.freedesktop.portal.Settings.Read string:org.freedesktop.appearance string:color-scheme"
+
+			local result = vim.fn.system(cmd)
+			return result:match("uint32%s+1") or result:match("uint32%s+[02]")
+		end,
+		opts = {
+			set_dark_mode = function()
+				set_theme("tokyonight-moon")
+			end,
+			set_light_mode = function()
+				set_theme("tokyonight-day")
+			end,
+			update_interval = 1000,
+		},
+	},
 }

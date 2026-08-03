@@ -6,11 +6,31 @@ return {
 		enabled = false,
 		init = function()
 			vim.g.VM_maps = {
-                -- TODO: find other keymap, this one is used
+				-- TODO: find other keymap, this one is used
 				-- ["Find Under"] = "<C-y>",
 				-- ["Find Subword Under"] = "<C-y>",
 			}
 		end,
+	},
+
+	{
+		-- adds smooth, customizable animations to text operations like yank, paste, search, undo/redo, and more.
+		"rachartier/tiny-glimmer.nvim",
+		event = "BufReadPost",
+		opts = {
+			overwrite = {
+				search = {
+					enabled = true,
+				},
+				undo = {
+					enabled = true,
+				},
+				redo = {
+					enabled = true,
+				},
+			},
+			autoreload = true,
+		},
 	},
 
 	{
@@ -21,7 +41,7 @@ return {
 	},
 
 	{
-        -- animated scrolling
+		-- animated scrolling
 		"folke/snacks.nvim",
 		priority = 900,
 		lazy = false,
@@ -45,7 +65,7 @@ return {
 	{
 		-- Change the w, e, b motions. Move by subwords and skip insignificant punctuation.
 		"chrisgrieser/nvim-spider",
-        enabled = false,
+		enabled = false,
 		keys = {
 			{ "w", "<cmd>lua require('spider').motion('w')<CR>", mode = { "n", "o", "x" } },
 			{ "e", "<cmd>lua require('spider').motion('e')<CR>", mode = { "n", "o", "x" } },
@@ -65,7 +85,7 @@ return {
 					enabled = false,
 				},
 				char = {
-                    enabled = false,
+					enabled = false,
 					jump_labels = false,
 				},
 			},
@@ -109,7 +129,7 @@ return {
 	},
 
 	{
-        -- animated cursor
+		-- animated cursor
 		"sphamba/smear-cursor.nvim",
 		event = "VeryLazy",
 		enabled = false,
