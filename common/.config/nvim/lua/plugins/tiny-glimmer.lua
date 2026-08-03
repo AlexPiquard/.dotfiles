@@ -15,5 +15,6 @@ return {
 				enabled = true,
 			},
 		},
+		autoreload = true,
 	},
 }
