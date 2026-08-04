@@ -1,5 +1,8 @@
 return {
 	{
+		{ import = "plugins.lang" },
+	},
+	{
 		-- fix completions in neovim config
 		"folke/lazydev.nvim",
 		ft = "lua", -- only load on lua files
