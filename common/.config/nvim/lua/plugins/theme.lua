@@ -2,7 +2,7 @@ local function set_theme(name)
 	vim.cmd("colorscheme " .. name)
 end
 
--- theme colors:
+-- dark theme colors:
 -- bg = "#222436",
 -- bg_dark = "#1e2030",
 -- bg_dark1 = "#191B29",
@@ -39,6 +39,43 @@ end
 --   delete = "#e26a75",
 -- },
 
+-- light theme colors:
+-- bg = "#d3d4e0",
+-- bg_dark = "#c3c8da",
+-- bg_dark1 = "#b5bed5",
+-- bg_highlight = "#bdc0d5",
+-- blue = "#0078e9",
+-- blue0 = "#5679e4",
+-- blue1 = "#007ab4",
+-- blue2 = "#07879d",
+-- blue5 = "#006a83",
+-- blue6 = "#2e5857",
+-- blue7 = "#92a6d5",
+-- comment = "#727ab0",
+-- cyan = "#18687a",
+-- dark3 = "#8990b3",
+-- dark5 = "#68709a",
+-- fg = "#365fa6",
+-- fg_dark = "#555f8d",
+-- fg_gutter = "#a8aecb",
+-- git = {
+--   add = "#57683e",
+--   change = "#3a7ee4",
+--   delete = "#a83643"
+-- },
+-- green = "#506138",
+-- green1 = "#287769",
+-- green2 = "#38919f",
+-- magenta = "#9f46ff",
+-- magenta2 = "#d20065",
+-- orange = "#bf5700",
+-- purple = "#be19a7",
+-- red = "#ff053b",
+-- red1 = "#e34561",
+-- teal = "#287769",
+-- terminal_black = "#9ea2c5",
+-- yellow = "#815b00"
+
 return {
 	{
 		"folke/tokyonight.nvim",
@@ -46,7 +83,7 @@ return {
 		priority = 1000,
 		opts = {
 			style = "moon",
-			light_style = "day",
+			light_style = "moon",
 			styles = {
 				comments = { italic = true },
 				keywords = { italic = true },
