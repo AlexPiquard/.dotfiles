@@ -1,6 +1,6 @@
 # First install
 
-- install alacritty or kitty
+- install alacritty, kitty or ghostty
 - install 1password
 - zsh
     - install

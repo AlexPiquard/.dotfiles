@@ -1,0 +1,26 @@
+theme = dark:TokyoNight Moon,light:TokyoNight Day
+
+# fontconfig (98-recursive-mono.conf) forces the "Mono Linear" instance (MONO=1);
+# otherwise Ghostty loads "Sans Linear" (spacing=mono) and shapes at MONO=0
+# (1.3.1 bug: hb_font created before setVariations) -> "l" missing top bar.
+font-family = Recursive
+font-size = 10.5
+font-variation = MONO=1
+font-variation = CASL=0
+font-variation = wght=600
+font-variation = slnt=0
+font-variation = CRSV=1
+font-variation-bold = MONO=1
+font-variation-bold = CASL=1
+font-variation-bold = wght=900
+font-variation-italic = MONO=1
+font-variation-italic = CASL=1
+font-variation-italic = wght=600
+font-variation-bold-italic = MONO=1
+font-variation-bold-italic = CASL=1
+font-variation-bold-italic = wght=900
+
+keybind = ctrl+backspace=text:\x17
+
+shell-integration = zsh
+shell-integration-features = cursor,title,ssh-env,ssh-terminfo,path,no-sudo
