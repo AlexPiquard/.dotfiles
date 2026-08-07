@@ -40,10 +40,10 @@ end
 -- },
 
 -- light theme colors:
--- bg = "#d3d4e0",
--- bg_dark = "#c3c8da",
--- bg_dark1 = "#b5bed5",
--- bg_highlight = "#bdc0d5",
+-- bg = "#e1e2e7", (using the night version instead of #d3d4e0)
+-- bg_dark = "#d0d5e3", (using the night version instead of #c3c8da)
+-- bg_dark1 = "#c1c9df", (using the night version instead of #b5bed5)
+-- bg_highlight = "#c4c8da", (using the night version instead of #bdc0d5)
 -- blue = "#0078e9",
 -- blue0 = "#5679e4",
 -- blue1 = "#007ab4",
@@ -93,11 +93,6 @@ return {
 				floats = "dark",
 			},
 
-			-- transparent = true,
-			-- styles = {
-			-- 	sidebars = "transparent",
-			-- 	floats = "transparent",
-			-- },
 			on_highlights = function(hl, c)
 				-- Fyler git colors
 				hl.FylerGitModified = { fg = c.git.change }
@@ -108,6 +103,12 @@ return {
 				hl.TabLineFill = { fg = c.fg_sidebar, bg = c.bg }
 				-- Flash
 				hl.FlashLabel = { fg = c.bg, bg = "#d20065" }
+			end,
+			on_colors = function(colors)
+				colors.bg = "#e1e2e7"
+				colors.bg_dark = "#d0d5e3"
+				colors.bg_dark1 = "#c1c9df"
+				colors.bg_highlight = "#c4c8da"
 			end,
 		},
 		config = function(_, opts)
