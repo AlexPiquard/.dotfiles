@@ -20,6 +20,8 @@ font-variation-bold-italic = MONO=1
 font-variation-bold-italic = CASL=1
 font-variation-bold-italic = wght=900
 
+adjust-cursor-thickness = 1
+
 keybind = ctrl+backspace=text:\x17
 
 shell-integration = zsh
