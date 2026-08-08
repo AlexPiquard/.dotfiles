@@ -54,7 +54,7 @@
 | plugin action               | keymap      |
 |-----------------------------|-------------|
 | next/previous error         | alt b/B     |
-| open context menu           | ctrl p      |
+| open color picker           | ctrl p      |
 | toggle table mode in readme | <leader>tm  |
 | todos picker                | <leader>st  |
 | files picker                | <leader>ff  |

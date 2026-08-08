@@ -105,10 +105,12 @@ return {
 				hl.FlashLabel = { fg = c.bg, bg = "#d20065" }
 			end,
 			on_colors = function(colors)
-				colors.bg = "#e1e2e7"
-				colors.bg_dark = "#d0d5e3"
-				colors.bg_dark1 = "#c1c9df"
-				colors.bg_highlight = "#c4c8da"
+				if vim.o.background == "light" then
+					colors.bg = "#e1e2e7"
+					colors.bg_dark = "#d0d5e3"
+					colors.bg_dark1 = "#c1c9df"
+					colors.bg_highlight = "#c4c8da"
+				end
 			end,
 		},
 		config = function(_, opts)
